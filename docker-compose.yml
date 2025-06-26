@@ -42,7 +42,7 @@ services:
             - PMA_USER=docker
             - PMA_PASSWORD=docker
         ports:
-            - 8080:80
+            - 8081:80
         networks:
             - app-networks
 volumes:
