@@ -36665,3 +36665,268 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 59ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 6050)
 
 
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:52:47 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 249.4ms | Allocations: 24013)
+Completed 200 OK in 328ms (Views: 294.2ms | ActiveRecord: 0.0ms | Allocations: 25904)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:54:54 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 251.1ms | Allocations: 23678)
+Completed 200 OK in 283ms (Views: 259.7ms | ActiveRecord: 0.0ms | Allocations: 25563)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:55:16 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 224.5ms | Allocations: 24001)
+Completed 200 OK in 257ms (Views: 233.4ms | ActiveRecord: 0.0ms | Allocations: 25891)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 04:55:19 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.7ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 5910)
+Completed 200 OK in 71ms (Views: 53.1ms | ActiveRecord: 0.0ms | Allocations: 6221)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 04:55:20 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 5987)
+Completed 200 OK in 68ms (Views: 54.7ms | ActiveRecord: 0.0ms | Allocations: 6237)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:55:22 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | Allocations: 5891)
+Completed 200 OK in 61ms (Views: 48.3ms | ActiveRecord: 0.0ms | Allocations: 6142)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:56:30 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 249.6ms | Allocations: 25075)
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 0.0ms | Allocations: 26944)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/var/www/app/views"
+  * "/bundle_cache/ruby/3.2.0/gems/devise-4.9.3/app/views"
+  * "/bundle_cache/ruby/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "/bundle_cache/ruby/3.2.0/gems/actiontext-7.1.2/app/views"
+  * "/bundle_cache/ruby/3.2.0/gems/actionmailbox-7.1.2/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render 'layout/navbar'%>
+    16:     <main>
+    17:         <%= yield %>
+    18:     </main>
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:56:43 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 179)
+  Rendered layouts/_navbar.html.erb (Duration: 4.3ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 312.0ms | Allocations: 24086)
+Completed 200 OK in 356ms (Views: 333.2ms | ActiveRecord: 0.0ms | Allocations: 25971)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:57:05 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.3ms | Allocations: 183)
+  Rendered layouts/_navbar.html.erb (Duration: 4.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 259.7ms | Allocations: 24097)
+Completed 200 OK in 308ms (Views: 283.8ms | ActiveRecord: 0.0ms | Allocations: 25987)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 04:58:04 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 185)
+  Rendered layouts/_navbar.html.erb (Duration: 4.0ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 245.5ms | Allocations: 24076)
+Completed 200 OK in 295ms (Views: 258.8ms | ActiveRecord: 0.0ms | Allocations: 25966)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 05:00:59 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 187)
+  Rendered layouts/_navbar.html.erb (Duration: 5.5ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 281.5ms | Allocations: 23872)
+Completed 200 OK in 326ms (Views: 292.1ms | ActiveRecord: 0.0ms | Allocations: 25759)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 05:01:01 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 5981)
+Completed 200 OK in 62ms (Views: 50.3ms | ActiveRecord: 0.0ms | Allocations: 6232)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 05:01:03 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.3ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 5982)
+Completed 200 OK in 72ms (Views: 54.0ms | ActiveRecord: 0.0ms | Allocations: 6293)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 05:01:04 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 5869)
+Completed 200 OK in 61ms (Views: 49.0ms | ActiveRecord: 0.0ms | Allocations: 6120)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 08:13:57 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.7ms | Allocations: 37)
+  Rendered layouts/_navbar.html.erb (Duration: 6.0ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 217.0ms | Allocations: 5876)
+Completed 200 OK in 251ms (Views: 226.6ms | ActiveRecord: 0.0ms | Allocations: 6126)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 08:14:02 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.0ms | Allocations: 186)
+  Rendered layouts/_navbar.html.erb (Duration: 6.0ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 500.8ms | Allocations: 24223)
+Completed 200 OK in 557ms (Views: 518.5ms | ActiveRecord: 0.0ms | Allocations: 26113)
+
+
+Started GET "/" for 172.28.0.1 at 2025-06-26 08:14:06 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 5907)
+Completed 200 OK in 71ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 6158)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 08:14:09 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.2ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 6047)
+Completed 200 OK in 83ms (Views: 66.0ms | ActiveRecord: 0.0ms | Allocations: 6359)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 08:14:34 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 6.8ms | Allocations: 176)
+  Rendered layouts/_navbar.html.erb (Duration: 5.8ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 283.1ms | Allocations: 24031)
+Completed 200 OK in 314ms (Views: 291.7ms | ActiveRecord: 0.0ms | Allocations: 25921)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 08:15:24 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.9ms | Allocations: 180)
+  Rendered layouts/_navbar.html.erb (Duration: 4.0ms | Allocations: 233)
+  Rendered layout layouts/application.html.erb (Duration: 279.2ms | Allocations: 24224)
+Completed 200 OK in 464ms (Views: 291.1ms | ActiveRecord: 0.0ms | Allocations: 26114)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 08:16:53 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.8ms | Allocations: 176)
+  Rendered layouts/_navbar.html.erb (Duration: 5.4ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 280.3ms | Allocations: 24234)
+Completed 200 OK in 317ms (Views: 290.6ms | ActiveRecord: 0.0ms | Allocations: 26124)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 08:17:17 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.8ms | Allocations: 174)
+  Rendered layouts/_navbar.html.erb (Duration: 6.3ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 827.5ms | Allocations: 24138)
+Completed 200 OK in 860ms (Views: 836.6ms | ActiveRecord: 0.0ms | Allocations: 26026)
+
+
+Started GET "/about" for 172.28.0.1 at 2025-06-26 08:17:26 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 5.3ms | Allocations: 174)
+  Rendered layouts/_navbar.html.erb (Duration: 4.1ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 261.4ms | Allocations: 24164)
+Completed 200 OK in 294ms (Views: 270.3ms | ActiveRecord: 0.0ms | Allocations: 26054)
+
+
