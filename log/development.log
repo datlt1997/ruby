@@ -37171,3 +37171,15 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 99ms (Views: 79.0ms | ActiveRecord: 0.0ms | Allocations: 6081)
 
 
+Started GET "/" for 172.18.0.1 at 2025-06-28 03:40:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (12.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.7ms | Allocations: 382)
+  Rendered layouts/_navbar.html.erb (Duration: 5.0ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 4008.6ms | Allocations: 61353)
+Completed 200 OK in 13750ms (Views: 4151.5ms | ActiveRecord: 0.0ms | Allocations: 1043293)
+
+
