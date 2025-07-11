@@ -26,8 +26,6 @@ gem "bootstrap"
 
 gem 'font-awesome-sass', '~> 5.15'
 
-gem 'adminlte-rails'
-
 gem "sassc-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
