@@ -6,4 +6,6 @@
     <%= post.body %>
   </p>
 
+  <%= image_tag(post.image, size: "200x150") if post.image.present? %>
+
 </div>

@@ -1,9 +1,33 @@
-<h1>New post</h1>
+<p style="color: green;"><%= notice %></p>
 
-<%= render "form", post: @post %>
+<div class="card">
+  <div class="card-header d-flex align-items-center">
+    <%= link_to posts_path, class: "btn btn-outline-secondary me-2" do %>
+      <%= icon('fa-solid', 'arrow-left') %>
+    <% end %>
+    <h5 class="mb-0">New Post</h5>
+  </div>
 
-<br>
+  <div class="card-body mx-5">
+    <%= form_with model: @post, local: true, html: { multipart: true } do |form| %>
+      <div class="mb-3">
+        <%= form.label :title, class: "form-label" %>
+        <%= form.text_field :title, class: "form-control", placeholder: "Title" %>
+      </div>
 
-<div>
-  <%= link_to "Back to posts", posts_path %>
+      <div class="mb-3">
+        <%= form.label :content, class: "form-label" %>
+        <%= form.text_area :content, class: "form-control", placeholder: "Content" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :image, class: "form-label" %>
+        <%# Hiển thị ảnh nếu đã có %>
+        <%= image_tag url_for(@post.image), size: "200x150", class: "mb-2 d-block" if @post.image.attached? %>
+        <%= form.file_field :image, class: "form-control" %>
+      </div>
+
+      <%= form.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

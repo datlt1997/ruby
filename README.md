@@ -47,7 +47,14 @@
   rails db:seed
   ```
 
-## 4. Tài liệu tham khảo
+## 3. Cài đặt package trong file application.scss
+```sh
+    add into Gemfile
+    run bundle install
+    restart docker
+```
+
+## 5. Tài liệu tham khảo
 
 ### Document
 
