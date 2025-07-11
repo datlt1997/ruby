@@ -17,7 +17,7 @@ development:
   pool: 5
   username: docker
   password: docker
-  host: db-ruby
+  host: db_ruby_demo
   port: 3306
 
 # Warning: The database defined as "test" will be erased and

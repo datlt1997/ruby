@@ -17,7 +17,7 @@ services:
             - app-networks
     mysql:
         image: mysql:8.0.2
-        container_name: db-ruby
+        container_name: db_ruby_demo
         ports:
             - 3308:3306
         environment:
@@ -36,7 +36,7 @@ services:
         container_name: ruby_phpmyadmin
         environment:
             - PMA_ARBITRARY=1
-            - PMA_HOST=db-ruby
+            - PMA_HOST=db_ruby_demo
             - PMA_USER=docker
             - PMA_PASSWORD=docker
         ports:
