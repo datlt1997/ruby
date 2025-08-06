@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Panel</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" %>
+    <%= tag.link rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css", integrity: "sha512-...", crossorigin: "anonymous" %>
+  </head>
+
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <%= render 'layouts/admin/navbar'%>
+      <main class="bd-layout d-flex flex-nowrap">
+        <%= render 'layouts/admin/sidebar'%>
+        <div class="content-wrapper mx-5 my-4">
+          <div class="content-header">
+            <%= yield(:title_page) %>
+          </div>
+          <div class="content">
+            <div class="container-fluid">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

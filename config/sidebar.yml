@@ -1,0 +1,6 @@
+admin_menu:
+  - name: "Quản lý người dùng"
+    path: "/admin/users"
+
+  - name: "Quản lý bài viết"
+    path: "/admin/posts"
