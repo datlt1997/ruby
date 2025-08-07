@@ -1,6 +1,6 @@
-<p style="color: green;"><%= notice %></p>
+<% content_for :title, "Chỉnh sửa bài viết" %>
 <% content_for :title_page, "Chỉnh sửa bài viết" %>
-<div class="card">
+<div class="card mb-3">
   <div class="card-body mx-2  mt-2 mb-4">
     <%= form_with model: [:admin, @post], local: true, html: { multipart: true } do |form| %>
       <div class="mb-3">
@@ -9,8 +9,23 @@
       </div>
 
       <div class="mb-3">
+        <%= form.label :short_description , class: "form-label" %>
+        <%= form.text_area :short_description , class: "form-control", placeholder: "Content" %>
+      </div>
+
+      <div class="mb-3">
         <%= form.label :body, class: "form-label" %>
         <%= form.text_area :body, class: "form-control", placeholder: "Content" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :tag, class: "form-label" %>
+        <% Tag.all.each do |tag| %>
+          <div>
+            <%= check_box_tag "post[tag_ids][]", tag.id, @post.tag_ids.include?(tag.id), id: "post_tag_ids_#{tag.id}" %>
+            <%= label_tag "post_tag_ids_#{tag.id}", tag.name %>
+          </div>
+        <% end %>
       </div>
 
       <div class="mb-3">

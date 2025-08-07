@@ -1,0 +1,13 @@
+<div id="flash-messages" class="flash-container">
+  <% if flash[:notice] %>
+    <div data-controller="flash" class="flash flash-notice">
+      <span><%= flash[:notice] %></span>
+    </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div data-controller="flash" class="flash flash-alert">
+      <span><%= flash[:alert] %></span>
+    </div>
+  <% end %>
+</div>

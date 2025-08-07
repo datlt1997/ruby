@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :title, "Danh sách bài viết" %>
 <% content_for :title_page, "Danh sách bài viết" %>
-<div class="card">
+<div class="card mb-3">
+  <%= form_with url: admin_posts_path, class: "form-search", method: :get, local: true do |form| %>
+    <div class="imput-search-group">
+      <%= form.label :q, "Tìm kiếm tiêu đề", class: "col-form-label label-form-search" %>
+      <%= form.text_field :q, value: params[:q], class: "form-control input-form-search", placeholder: "Nhập tiêu đề..." %>
+    </div>
+    <%= form.submit "Tìm kiếm", class: "btn btn-primary bth-search" %>
+  <% end %>
   <div class="card-body mx-2">
     <%= link_to "New post", new_admin_post_path, class: "btn btn-primary" %>
-    <table class="table">
+    <table class="table mb-3">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Title</th>
-            <th scope="col">Content</th>
+            <th scope="col">Short description</th>
+            <th scope="col">Tag</th>
             <th scope="col">Image</th>
             <th scope="col">Views</th>
             <th scope="col">Action</th>
@@ -19,7 +27,14 @@
               <tr>
                   <td><%= post.id %></td>
                   <td><%= post.title %></td>
-                  <td><%= post.body %></td>
+                  <td><%= truncate(post.short_description, length: 30)  %></td>
+                  <td>
+                    <% post.tags.limit(3).each do |tag| %>
+                      <span class="badge bg-secondary">
+                        <%= truncate(tag.name, length: 20) %>
+                      </span>
+                    <% end %>
+                  </td>
                   <td><%= image_tag(post.image, size: "100x70") if post.image.present? %></td>
                   <td><%= post.views_count ? post.views_count : 0  %></td>
                   <td>
@@ -34,5 +49,8 @@
           <% end %>
         </tbody>
       </table>
+      <div class="pagination">
+        <%= paginate @posts %>
+      </div>
   </div>
 </div>

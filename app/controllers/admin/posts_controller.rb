@@ -5,6 +5,9 @@ module Admin
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+
+    @posts = @posts.where("LOWER(title) LIKE ?", "%#{params[:q]}%").order(created_at: :desc).page(params[:page]).per(5)
+    
   end
 
   # GET /posts/1 or /posts/1.json
@@ -66,7 +69,7 @@ module Admin
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :image)
+      params.require(:post).permit(:title, :short_description, :body, :image, tag_ids: [])
     end
   end
 end

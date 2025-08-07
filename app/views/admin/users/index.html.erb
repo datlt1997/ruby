@@ -1,6 +1,6 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :title, "Danh sách bài viết" %>
 <% content_for :title_page, "Danh sách bài viết" %>
-<div class="card">
+<div class="card mb-3">
   <div class="card-body mx-2">
     <%= link_to "New user", new_admin_user_path, class: "btn btn-primary" %>
     <table class="table">

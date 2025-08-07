@@ -3,6 +3,11 @@ class User < ApplicationRecord
 
   enum role: { user: 0, admin: 1 }
 
-  validates :email, presence: true, uniqueness: true, length: { in: 6..50}
-  validates :password, presence: true, length: {minimum: 6}
+  validates :email,
+            presence: true,
+            format: { with: URI::MailTo::EMAIL_REGEXP, message: "không hợp lệ" }
+
+  validates :password,
+            length: { minimum: 6, message: "phải có ít nhất 6 ký tự" },
+            if: -> { new_record? || !password.nil? }
 end

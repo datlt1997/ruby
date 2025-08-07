@@ -1,0 +1,16 @@
+<% content_for :title, "Tạo nhãn" %>
+<% content_for :title_page, "Tạo nhãn" %>
+<div class="card mb-3">
+  <div class="card-body mx-2 mt-2 mb-4">
+    <%= form_with model: [:admin, @tag], local: true, html: { multipart: true } do |form| %>
+      <div class="mb-3">
+        <%= form.label :name, class: "form-label" %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Name" %>
+      </div>
+      <div class="text-center">
+        <%= link_to "Back", admin_tags_path, class: "btn btn-outline-secondary me-2" %>
+        <%= form.submit "Create", class: "btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+</div>

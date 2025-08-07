@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Panel</title>
+    <title>Blog Admin - <%= yield(:title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -11,9 +11,10 @@
   </head>
 
   <body class="hold-transition sidebar-mini layout-fixed">
+  <%= render 'layouts/notification' %>
     <div class="wrapper">
       <!-- Navbar -->
-      <%= render 'layouts/admin/navbar'%>
+      <%= render 'layouts/admin/navbar' %>
       <main class="bd-layout d-flex flex-nowrap">
         <%= render 'layouts/admin/sidebar'%>
         <div class="content-wrapper mx-5 my-4">

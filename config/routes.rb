@@ -18,11 +18,14 @@ Rails.application.routes.draw do
 
     resources :posts
     resources :users
+    resources :tags
   end
 
   
   get 'home', to: 'pages#home'
   get 'about', to: 'pages#about'
+
+  resources :posts, only: [ :show]
 
   root 'pages#home'
 end
