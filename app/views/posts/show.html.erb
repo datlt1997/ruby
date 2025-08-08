@@ -1,10 +1,7 @@
+<% content_for :title, "Chi tiết bài viết" %>
 <div class="container mt-4">
-  
-
   <% if @post.image.present? %>
     <%= image_tag @post.image, class: "img-fluid", alt: @post.title %>
-  <% else %>
-    <%= image_tag "no-image.png", class: "img-fluid", alt: "No image" %>
   <% end %>
   
   <h1><%= @post.title %></h1>
@@ -14,5 +11,5 @@
   <div class="mt-3">
     <%= simple_format(@post.body) %>
   </div>
-  <%= link_to "Back", root_path, class: "btn btn-light" %>
+  <%= link_to "Back", (session[:user_id].present? ? user_root_path : root_path) , class: "btn btn-light" %>
 </div>

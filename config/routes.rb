@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     post 'login',  to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy'
 
+    resources :posts, only: [ :show]
+    
     get '/', to: 'dashboard#index'
     root 'dashboard#index'
   end

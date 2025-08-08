@@ -1,18 +1,11 @@
 <nav class="navbar navbar-expand-lg border-bottom">
   <div class="container-fluid">
-    <%= link_to "Rails Blog", root_path, class:"navbar-brand"%>
+    <%= link_to "Rails Blog", (current_user ? user_root_path : root_path), class:"navbar-brand"%>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class:"nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "About", about_path, class:"nav-link" %>
-        </li>
-      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
       <% if current_user %>
         <div class="dropdown text-end">
           <button
@@ -24,7 +17,7 @@
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </button>
           <ul class="dropdown-menu dropdown-menu-end text-small">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Cài Đặt</a></li>
             <li><hr class="dropdown-divider"></li>
             <li>
                 <% logout_path = current_user.admin? ? admin_logout_path : user_logout_path %>
