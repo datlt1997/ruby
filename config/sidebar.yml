@@ -7,3 +7,9 @@ admin_menu:
 
   - name: "Quản lý nhãn"
     path: "/admin/tags"
+
+  - name: "Quản lý giải thưởng"
+    path: "/admin/prizes"
+
+  - name: "Quản lý chọn số"
+    path: "/admin/select_numbers"

@@ -1,0 +1,26 @@
+<% content_for :title, "Danh sách chọn số" %>
+<% content_for :title_page, "Danh sách chọn số" %>
+<div class="card mb-3">
+  <div class="card-body mx-2">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Number</th>
+        <th scope="col">Created at</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @selectNumbers.each do |select_number| %>
+        <tr>
+          <td><%= select_number.id %></td>
+          <td><%= select_number.user.full_name %></td>
+          <td><%= select_number.number %></td>
+          <td><%= select_number.created_at %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

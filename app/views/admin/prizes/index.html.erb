@@ -1,0 +1,38 @@
+<% content_for :title, "Danh sách giải thưởng" %>
+<% content_for :title_page, "Danh sách giải thưởng" %>
+<div class="card mb-3">
+  <div class="card-body mx-2">
+    <%= link_to "New prize", new_admin_prize_path, class: "btn btn-primary" %>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @prizes.each do |prize| %>
+              <tr>
+                  <td><%= prize.id %></td>
+                  <td><%= prize.name %></td>
+                  <td><%= prize.quantity %></td>
+                  <td><%= prize.description %></td>
+                  <td><%= image_tag prize.image.variant(resize_to_limit: [50, 50])  if prize.image.attached? %></td>
+                  <td>
+                    <%= link_to edit_admin_prize_path(prize), class: "btn btn-primary" do %>
+                      <%= icon('fa-solid', 'pen') %>
+                    <% end %>
+                    <%= button_to admin_prize_path(prize), method: :delete, data: { turbo_confirm: "Are you sure?" }, form: { class: 'd-inline-block' }, class: "btn btn-danger" do %>
+                      <%= icon('fa-solid', 'trash')%>
+                    <% end %>
+                  </td>
+              </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+</div>

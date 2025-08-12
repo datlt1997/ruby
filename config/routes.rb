@@ -21,6 +21,9 @@ Rails.application.routes.draw do
     resources :posts
     resources :users
     resources :tags
+    resources :prizes
+    resources :winners
+    resources :select_numbers, only: [ :index]
   end
 
   
