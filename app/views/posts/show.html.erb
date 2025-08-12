@@ -11,5 +11,5 @@
   <div class="mt-3">
     <%= simple_format(@post.body) %>
   </div>
-  <%= link_to "Back", (session[:user_id].present? ? user_root_path : root_path) , class: "btn btn-light" %>
+  <%= link_to "Back", :back, class: "btn btn-light" %>
 </div>

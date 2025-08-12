@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_08_07_070225) do
+ActiveRecord::Schema[7.1].define(version: 2025_08_12_075333) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -58,6 +58,22 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_07_070225) do
     t.text "short_description"
   end
 
+  create_table "prizes", charset: "utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "quantity", null: false
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "select_numbers", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_select_numbers_on_user_id"
+  end
+
   create_table "tags", charset: "utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -70,10 +86,27 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_07_070225) do
     t.integer "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "full_name"
+    t.text "phone"
+  end
+
+  create_table "winners", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "select_number_id", null: false
+    t.bigint "prize_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["prize_id"], name: "index_winners_on_prize_id"
+    t.index ["select_number_id"], name: "index_winners_on_select_number_id"
+    t.index ["user_id"], name: "index_winners_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "post_tags", "posts"
   add_foreign_key "post_tags", "tags"
+  add_foreign_key "select_numbers", "users"
+  add_foreign_key "winners", "prizes"
+  add_foreign_key "winners", "select_numbers"
+  add_foreign_key "winners", "users"
 end

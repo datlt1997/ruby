@@ -14,8 +14,8 @@ module Admin
     end
 
     def create
-      @user = User.new(post_params)
-
+      @user = User.new(user_params)
+      @user.role = 0
       respond_to do |format|
         if @user.save
           format.html { redirect_to admin_users_url, notice: "User was successfully created." }
@@ -56,7 +56,16 @@ module Admin
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email)
+      permitted = params.require(:user).permit(:email, :password, :full_name, :phone, :avatar)
+      if permitted[:password].blank?
+        permitted.delete(:password)
+      end
+
+      if permitted[:avatar].blank?
+        permitted.delete(:avatar)
+      end
+
+      permitted
     end
 
   end
