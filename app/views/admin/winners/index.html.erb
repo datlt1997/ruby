@@ -1,0 +1,68 @@
+<% content_for :title, "Danh sách trúng thưởng" %>
+<% content_for :title_page, "Danh sách trúng thưởng" %>
+
+
+
+
+
+
+<div data-controller="spinner">
+  <div class="card mb-3">
+    <div class="card-body mx-2">
+      <table class="table" data-spinner-target="resultTable">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Select Number</th>
+          <th>Prize</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @winners.each do |winner| %>
+          <tr>
+            <td><%= winner.id %></td>
+            <td><%= winner.user.full_name %></td>
+            <td><%= winner.select_number.number %></td>
+            <td><%= winner.prize.name %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="lottery-box">
+    <div class="toolbar">
+      <label for="prize">Chọn giải:</label>
+      <select id="prize" data-spinner-target="prizeSelect">
+        <% @prizes.each do |p| %>
+          <option value="<%= p.id %>"><%= p.name %></option>
+        <% end %>
+      </select>
+
+      <button data-action="spinner#start"
+              data-spinner-target="startBtn"
+              class="btn start">Bắt đầu</button>
+
+      <button data-action="spinner#stop"
+              data-spinner-target="stopBtn"
+              class="btn stop"
+              disabled>Dừng</button>
+    </div>
+
+    <div class="display" data-spinner-target="display">---</div>
+
+    <div class="result" data-spinner-target="resultBox"></div>
+  </div>
+
+</div>
+
+<style>
+  .lottery-box{max-width:720px;margin:40px auto;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 10px 25px rgba(0,0,0,.06);background:#fff}
+  .toolbar{display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:20px}
+  .btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer}
+  .btn.start{background:#16a34a;color:#fff}
+  .btn.stop{background:#dc2626;color:#fff}
+  .display{font-size:72px;font-weight:800;text-align:center;letter-spacing:2px;padding:28px 0;border-radius:12px;background:#111827;color:#f9fafb}
+  .result{margin-top:18px;text-align:center;font-size:18px}
+</style>

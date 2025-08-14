@@ -107,3 +107,35 @@
 .card-img-top {
     object-fit: cover;
 }
+
+.text-header {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 10px;
+}
+
+.gift-box {
+  background-color: #ffcccc;
+  border: none;
+  border-radius: 8px;
+  padding: 25px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.gift-box.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.selected-number {
+  background: gray;
+}

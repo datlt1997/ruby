@@ -13,3 +13,6 @@ admin_menu:
 
   - name: "Quản lý chọn số"
     path: "/admin/select_numbers"
+
+  - name: "Quản lý trúng thưởng"
+    path: "/admin/winners"

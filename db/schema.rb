@@ -91,14 +91,12 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_12_075333) do
   end
 
   create_table "winners", charset: "utf8", force: :cascade do |t|
-    t.bigint "user_id"
     t.bigint "select_number_id", null: false
     t.bigint "prize_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["prize_id"], name: "index_winners_on_prize_id"
     t.index ["select_number_id"], name: "index_winners_on_select_number_id"
-    t.index ["user_id"], name: "index_winners_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
@@ -108,5 +106,4 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_12_075333) do
   add_foreign_key "select_numbers", "users"
   add_foreign_key "winners", "prizes"
   add_foreign_key "winners", "select_numbers"
-  add_foreign_key "winners", "users"
 end

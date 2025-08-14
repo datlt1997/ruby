@@ -1,0 +1,257 @@
+:root{
+  --bg:#0b1022;
+  --glass:#0ea5e9;
+  --metal:#9ca3af;
+  --accent:#38bdf8;
+  --tray:#0b1226;
+  --text:#e5e7eb;
+}
+*{
+  box-sizing:border-box
+}
+html,body{
+  height:100%
+}
+body{
+  margin:0;
+  color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.rig{
+  position:relative;
+  width: calc(min(750px, 96vw));
+  height: calc(min(550px, 86vh));
+  display:grid;
+  place-items:center;
+}
+/* Machine frame */
+.machine{
+  position:relative;
+  width:calc(min(540px, 90vw));
+  height:calc(min(540px, 90vw));
+}
+.frame{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background: radial-gradient(closest-side, rgba(56,189,248,.12), rgba(56,189,248,.05) 60%, transparent 61%), radial-gradient(circle at 50% 50%, rgba(255,255,255,.04), rgba(0,0,0,.25));
+  box-shadow: inset 0 0 0 2px rgba(148,163,184,.25), 0 30px 60px rgba(0,0,0,.55);
+  transition:filter .6s ease, opacity .6s ease;
+}
+/* Cage ring and bars */
+.cage{
+  position:absolute;
+  inset:20px;
+  border-radius:50%;
+  overflow:hidden;
+  filter: drop-shadow(0 14px 30px rgba(0,0,0,.45));
+}
+.cage .glass{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background: repeating-conic-gradient(rgba(148,163,184,.22) 0 4deg, transparent 4deg 12deg), radial-gradient(120% 120% at 30% 10%, rgba(255,255,255,.25), rgba(255,255,255,0) 40%), radial-gradient(closest-side, rgba(14,165,233,.12), rgba(2,6,23,.2));
+  backdrop-filter: blur(1px);
+  border:1px solid rgba(148,163,184,.35);
+}
+.spinning-glass {
+  animation: glassSpin 3s linear infinite;
+}
+@keyframes glassSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.cage::after{
+  content:"";
+  position:absolute;
+  right:-6px;
+  top:50%;
+  transform:translateY(-50%);
+  width:26px;
+  height:90px;
+  background: radial-gradient(closest-side, #0f172a, #0b1226);
+  border:1px solid rgba(148,163,184,.5);
+  border-left:none;
+  border-radius:0 12px 12px 0;
+  z-index:3;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+}
+/* Crank / tay quay (decorative) */
+.crank{
+  position:absolute;
+  right:-56px;
+  top:38%;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #cbd5e1, #64748b);
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.3), 0 8px 18px rgba(0,0,0,.5);
+}
+.crank::after{
+  content:"";
+  position:absolute;
+  right:-28px;
+  top:18px;
+  width:48px;
+  height:20px;
+  border-radius:12px;
+  background:linear-gradient(180deg,#cbd5e1,#64748b);
+  box-shadow:0 6px 12px rgba(0,0,0,.4);
+}
+/* Lever */
+.lever-wrap{
+  position:absolute;
+  left:-116px;
+  top:50%;
+  transform:translateY(-50%);
+  width:16px;
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.lever{
+  width:16px;
+  height:140px;
+  background:linear-gradient(180deg,#64748b,#374151);
+  border-radius:12px;
+  transform-origin:50% 85%;
+  transition:transform .18s ease;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+  cursor:pointer;
+}
+.lever .knob{
+  position:absolute;
+  left:-12px;
+  top:-24px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:linear-gradient(180deg,#f3f4f6,#9ca3af);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#0b1226;
+  box-shadow:0 8px 18px rgba(0,0,0,.5);
+}
+.lever.pulled{
+  transform:rotate(40deg) translateX(-6px);
+}
+/* Balls */
+.balls{
+  position:absolute;
+  inset:38px;
+  border-radius:50%;
+}
+.ball{
+  position:absolute;
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  color:#0b1226;
+  box-shadow: inset 0 -10px 18px rgba(0,0,0,.35), 0 8px 16px rgba(0,0,0,.35);
+  user-select:none;
+  pointer-events:none;
+}
+.ball .num{
+  display:none;
+  font-size:28px;
+  text-shadow:0 2px 8px rgba(255,255,255,.45);
+}
+/* opening effect: two halves */
+.ball .half{
+  position:absolute;
+  width:50%;
+  height:100%;
+  top:0;
+  overflow:visible;
+  pointer-events:none;
+}
+.ball .half.left{
+  left:0;
+  transform-origin:left center;
+}
+.ball .half.right{
+  right:0;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  transform-origin:right center;
+}
+.ball .half.left .shell{
+  position:absolute;
+  inset:0;
+  border-top-left-radius: 100% 50%;
+  border-bottom-left-radius: 100% 50%;
+}
+.ball .half.right .shell{
+  position:absolute;
+  inset:0;
+  border-top-right-radius: 100% 50%;
+  border-bottom-right-radius: 100% 50%;
+}
+/* when opened: split halves + reveal num */
+.ball.opened .half.left{
+  transform:translateX(-8px) rotate(-18deg);
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  transform-origin: bottom right;
+}
+.ball.opened .half.right{
+  transform:translateX(8px) rotate(18deg);
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  transform-origin: bottom left;
+}
+.ball.opened .num{
+  display:block;
+  opacity:0;
+  transform:scale(.8);
+  transition:opacity .36s ease .2s, transform .36s ease .2s;
+}
+.ball.opened .num.show{
+  opacity:1;
+  transform:scale(1);
+}
+/* visual focus layer for fading-out machine */
+.machine.faded .frame{
+  filter:blur(6px) grayscale(.2);
+  opacity:.08;
+}
+.machine.faded .cage .glass{
+  opacity:.08
+}
+/* quick helpers for center pop */
+.pop-center{
+  position:fixed;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  z-index:60;
+  pointer-events:none;
+}
+.pop-scale{
+  transition:transform .48s cubic-bezier(.2,.8,.2,1), opacity .48s ease;
+  transform-origin:center center;
+}
+.window-wrapper {
+  width: 1320px;
+  display: flex ;
+  justify-content: space-between;
+}
+.spin {
+  width: 800px;
+  position: relative;
+}
+.result {
+  width: 400px;
+}

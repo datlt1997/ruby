@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     resources :posts, only: [ :show]
     
     get '/', to: 'dashboard#index'
+    get '/select-number', to: 'dashboard#select_number'
+    post '/choose-number', to: 'dashboard#choose_number'
+    get '/results', to: 'dashboard#results'
+    post 'spin-lucky-number', to: 'dashboard#spin_lucky_number'
     root 'dashboard#index'
   end
 
@@ -18,12 +22,13 @@ Rails.application.routes.draw do
     get '/', to: 'dashboard#index'
     root 'dashboard#index'
 
-    resources :posts
-    resources :users
-    resources :tags
-    resources :prizes
-    resources :winners
+    resources :posts, :users, :tags, :prizes, :winners
     resources :select_numbers, only: [ :index]
+    get "/select_numbers/available", to: "select_numbers#available"
+    resources :winners, only: [:index] do
+      post :spin, on: :collection
+    end
+
   end
 
   

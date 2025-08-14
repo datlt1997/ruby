@@ -1,0 +1,47 @@
+<div class="window-wrapper" data-controller="lotto">
+  <div class="spin">
+    <div class="rig" data-lotto-target="rig">
+      <div class="machine" data-lotto-target="machine">
+        <div class="frame"></div>
+        <div class="cage">
+          <div class="glass"></div>
+          <div class="balls" data-lotto-target="balls"></div>
+        </div>
+
+        <!-- lever -->
+        <div class="lever-wrap">
+          <div class="lever" data-lotto-target="lever" aria-hidden="true">
+            <div class="knob">GO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label for="prize">Chọn giải:</label>
+    <select id="prize" data-lotto-target="prizeSelectUser">
+      <% @prizes.each do |p| %>
+        <option value="<%= p.id %>"><%= p.name %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="result mt-5">
+    <div class="title-header">Danh sách trúng thưởng</div>
+    <table class="table"  data-lotto-target="resultTableUser">
+      <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Lucky Number</th>
+        <th>Prizes</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @results.each do |result| %>
+        <tr>
+          <td><%= result.user.full_name %></td>
+          <td><%= result.select_number.number %></td>
+          <td><%= result.prize.name %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
