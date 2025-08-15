@@ -4,7 +4,7 @@ module Admin
 
   # GET /prizes or /prizes.json
   def index
-    @prizes = Prize.order(created_at: :desc).page(params[:page]).per(5)
+    @prizes = Prize.order(created_at: :desc).page(params[:page]).per(10)
     
   end
 

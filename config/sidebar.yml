@@ -2,11 +2,11 @@ admin_menu:
   - name: "Quản lý người dùng"
     path: "/admin/users"
 
-  - name: "Quản lý bài viết"
-    path: "/admin/posts"
-
-  - name: "Quản lý nhãn"
-    path: "/admin/tags"
+#  - name: "Quản lý bài viết"
+#    path: "/admin/posts"
+#
+#  - name: "Quản lý nhãn"
+#    path: "/admin/tags"
 
   - name: "Quản lý giải thưởng"
     path: "/admin/prizes"

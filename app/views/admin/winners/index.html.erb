@@ -1,11 +1,5 @@
 <% content_for :title, "Danh sách trúng thưởng" %>
 <% content_for :title_page, "Danh sách trúng thưởng" %>
-
-
-
-
-
-
 <div data-controller="spinner">
   <div class="card mb-3">
     <div class="card-body mx-2">
@@ -24,7 +18,7 @@
             <td><%= winner.id %></td>
             <td><%= winner.user.full_name %></td>
             <td><%= winner.select_number.number %></td>
-            <td><%= winner.prize.name %></td>
+            <td><%= winner.prize.name + " - " + winner.prize.description %></td>
           </tr>
         <% end %>
         </tbody>
@@ -34,7 +28,7 @@
   <div class="lottery-box">
     <div class="toolbar">
       <label for="prize">Chọn giải:</label>
-      <select id="prize" data-spinner-target="prizeSelect">
+      <select id="prize" class="form-select w-50" data-spinner-target="prizeSelect">
         <% @prizes.each do |p| %>
           <option value="<%= p.id %>"><%= p.name %></option>
         <% end %>
@@ -50,9 +44,8 @@
               disabled>Dừng</button>
     </div>
 
-    <div class="display" data-spinner-target="display">---</div>
+    <div class="display" data-spinner-target="display"></div>
 
-    <div class="result" data-spinner-target="resultBox"></div>
   </div>
 
 </div>
@@ -63,6 +56,6 @@
   .btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer}
   .btn.start{background:#16a34a;color:#fff}
   .btn.stop{background:#dc2626;color:#fff}
-  .display{font-size:72px;font-weight:800;text-align:center;letter-spacing:2px;padding:28px 0;border-radius:12px;background:#111827;color:#f9fafb}
+  .display{font-size:72px;font-weight:800;text-align:center;letter-spacing:2px;padding:28px 0;border-radius:12px;background:#111827;color:#f9fafb; height: 170px}
   .result{margin-top:18px;text-align:center;font-size:18px}
 </style>

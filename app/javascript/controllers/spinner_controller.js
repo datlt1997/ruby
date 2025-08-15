@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["prizeSelect", "startBtn", "stopBtn", "resultBox", "display", "resultTable"]
+  static targets = ["prizeSelect", "startBtn", "stopBtn", "display", "resultTable"]
 
   connect() {
     this.timer = null
@@ -63,7 +63,6 @@ export default class extends Controller {
     .then(res => res.json())
     .then(data => {
       this.displayTarget.textContent = data.number
-      this.resultBoxTarget.textContent = `🎉 ${data.name} 🎉`
       if (data.id) {
         this.addRow(data)
       }

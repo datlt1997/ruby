@@ -61,7 +61,9 @@
 }
 
 .user-content {
-  min-height: calc(100vh - 62px);
+  min-height: 100vh;
+  background: radial-gradient(120% 120% at 50% 0%, #0b1022, #060a18 80%);
+  padding-top: 45px;
 }
 
 .border-bottom {

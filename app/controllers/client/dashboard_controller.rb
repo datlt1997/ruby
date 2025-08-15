@@ -27,11 +27,10 @@ module Client
     end
 
     def results
-      @results = Winner.includes(:user, :prize, :select_number).order(created_at: :desc)
-      @prizes = Prize
-                  .left_joins(:winners)
-                  .group("prizes.id")
-                  .having("COUNT(winners.id) < prizes.quantity")
+      @results = Winner.includes(:user, :prize, :select_number)
+      @prizeNext = Prize.order(:id).find do |prize|
+        prize.winners.count < prize.quantity
+      end
     end
 
     def spin_lucky_number

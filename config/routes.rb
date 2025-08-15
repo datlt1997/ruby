@@ -5,13 +5,12 @@ Rails.application.routes.draw do
     delete 'logout', to: 'sessions#destroy'
 
     resources :posts, only: [ :show]
-    
-    get '/', to: 'dashboard#index'
+
     get '/select-number', to: 'dashboard#select_number'
     post '/choose-number', to: 'dashboard#choose_number'
     get '/results', to: 'dashboard#results'
     post 'spin-lucky-number', to: 'dashboard#spin_lucky_number'
-    root 'dashboard#index'
+    root 'dashboard#select_number'
   end
 
   namespace :admin do
@@ -33,7 +32,6 @@ Rails.application.routes.draw do
 
   
   get 'home', to: 'pages#home'
-  get 'about', to: 'pages#about'
 
   resources :posts, only: [ :show]
 

@@ -5,11 +5,9 @@ export default class extends Controller {
 
   connect() {
     this.selectedNumber = null
-    console.log(12333)
   }
 
   select(event) {
-    console.log(123)
     const btn = event.currentTarget
 
     if (this.selectedNumber === btn.dataset.number) {
@@ -24,7 +22,6 @@ export default class extends Controller {
   }
 
   submit() {
-    console.log(322)
     if (!this.selectedNumber) {
       alert("Vui lòng chọn một số!")
       return

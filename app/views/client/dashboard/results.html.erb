@@ -7,41 +7,26 @@
           <div class="glass"></div>
           <div class="balls" data-lotto-target="balls"></div>
         </div>
-
-        <!-- lever -->
-        <div class="lever-wrap">
-          <div class="lever" data-lotto-target="lever" aria-hidden="true">
-            <div class="knob">GO</div>
-          </div>
-        </div>
       </div>
     </div>
-    <label for="prize">Chọn giải:</label>
-    <select id="prize" data-lotto-target="prizeSelectUser">
-      <% @prizes.each do |p| %>
-        <option value="<%= p.id %>"><%= p.name %></option>
-      <% end %>
-    </select>
+    <div class="prize">
+      <div class="prize-lable">Giải Thưởng</div>
+      <div class="prize-name" data-lotto-target="prizeLabel" ><%= @prizeNext.name + " - " + @prizeNext.description %></div>
+    </div>
   </div>
   <div class="result mt-5">
-    <div class="title-header">Danh sách trúng thưởng</div>
-    <table class="table"  data-lotto-target="resultTableUser">
-      <thead>
-      <tr>
-        <th>Full Name</th>
-        <th>Lucky Number</th>
-        <th>Prizes</th>
-      </tr>
-      </thead>
-      <tbody>
+    <div class="result-header">Danh sách trúng thưởng</div>
+    <div class="result-content" data-lotto-target="resultRandomNUmber">
       <% @results.each do |result| %>
-        <tr>
-          <td><%= result.user.full_name %></td>
-          <td><%= result.select_number.number %></td>
-          <td><%= result.prize.name %></td>
-        </tr>
+        <div class="card card-winner card-winner-<%= result.prize_id %>">
+          <div class="card-winner-number"><%= result.select_number.number %></div>
+          <div class="card-winner-user-name"><%= result.user.full_name %></div>
+          <div class="card-winner-prize"><%= result.prize.name + " - " + result.prize.description %></div>
+        </div>
       <% end %>
-      </tbody>
-    </table>
+    </div>
+
   </div>
+
 </div>
+<%= link_to "Chọn số", user_select_number_path,  class: "btn btn-primary mt-3 " %>

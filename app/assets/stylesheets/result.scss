@@ -9,17 +9,11 @@
 *{
   box-sizing:border-box
 }
-html,body{
-  height:100%
-}
+
 body{
   margin:0;
   color:var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
 }
 .rig{
   position:relative;
@@ -69,21 +63,7 @@ body{
     transform: rotate(360deg);
   }
 }
-.cage::after{
-  content:"";
-  position:absolute;
-  right:-6px;
-  top:50%;
-  transform:translateY(-50%);
-  width:26px;
-  height:90px;
-  background: radial-gradient(closest-side, #0f172a, #0b1226);
-  border:1px solid rgba(148,163,184,.5);
-  border-left:none;
-  border-radius:0 12px 12px 0;
-  z-index:3;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
-}
+
 /* Crank / tay quay (decorative) */
 .crank{
   position:absolute;
@@ -106,46 +86,30 @@ body{
   background:linear-gradient(180deg,#cbd5e1,#64748b);
   box-shadow:0 6px 12px rgba(0,0,0,.4);
 }
-/* Lever */
-.lever-wrap{
-  position:absolute;
-  left:-116px;
-  top:50%;
-  transform:translateY(-50%);
-  width:16px;
-  height:150px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+
+.prize {
+  text-align: center;
+  margin-top: 30px;
 }
-.lever{
-  width:16px;
-  height:140px;
-  background:linear-gradient(180deg,#64748b,#374151);
-  border-radius:12px;
-  transform-origin:50% 85%;
-  transition:transform .18s ease;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
-  cursor:pointer;
+
+.prize-lable {
+  font-size: 30px;
+  font-weight: 700;
 }
-.lever .knob{
-  position:absolute;
-  left:-12px;
-  top:-24px;
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:linear-gradient(180deg,#f3f4f6,#9ca3af);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  color:#0b1226;
-  box-shadow:0 8px 18px rgba(0,0,0,.5);
+
+
+.prize-name {
+  border: 1px solid;
+  max-width: 320px;
+  border-radius: 35px;
+  padding: 15px;
+  margin: 10px auto;
+  font-size: 23px;
+  font-weight: 500;
+  background: #956363;
+  color: #fff;
 }
-.lever.pulled{
-  transform:rotate(40deg) translateX(-6px);
-}
+
 /* Balls */
 .balls{
   position:absolute;
@@ -203,15 +167,37 @@ body{
 }
 /* when opened: split halves + reveal num */
 .ball.opened .half.left{
-  transform:translateX(-8px) rotate(-18deg);
-  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  animation: openFadeOutLeft 1.5s cubic-bezier(.2,.8,.2,1) forwards;
   transform-origin: bottom right;
 }
+
+@keyframes openFadeOutLeft {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-8px) rotate(-18deg);
+    opacity: 0;
+  }
+}
+
 .ball.opened .half.right{
-  transform:translateX(8px) rotate(18deg);
-  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  animation: openFadeOutRight 1.5s cubic-bezier(.2,.8,.2,1) forwards;
   transform-origin: bottom left;
 }
+
+@keyframes openFadeOutRight {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(8px) rotate(18deg);
+    opacity: 0;
+  }
+}
+
 .ball.opened .num{
   display:block;
   opacity:0;
@@ -244,14 +230,70 @@ body{
   transform-origin:center center;
 }
 .window-wrapper {
-  width: 1320px;
+  width: 1380px;
   display: flex ;
   justify-content: space-between;
+  margin: 20px auto 0;
 }
 .spin {
   width: 800px;
   position: relative;
 }
 .result {
-  width: 400px;
+  width: 575px;
 }
+
+.card.card-winner {
+  width: 280px;
+  margin: 30px 0 0;
+  padding: 20px 10px 10px;
+  position: relative;
+}
+
+.card-winner-number {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 36px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.result-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.result-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-winner.card-winner-1 {
+  background-color: #253900;
+}
+
+.card-winner.card-winner-2 {
+  background-color: #568F87;
+}
+
+.card-winner.card-winner-3 {
+  background-color: #BB6653;
+}
+
+.card-winner.card-winner-4 {
+  background-color: #415E72;
+}
+
+.card-winner.card-winner-5 {
+  background-color: #4A9782;
+}
+

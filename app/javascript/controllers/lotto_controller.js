@@ -1,7 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
+import consumer from "../channels/consumer"
 
 export default class extends Controller {
-  static targets = ["balls", "machine", "rig", "lever", "resultTableUser", "prizeSelectUser"]
+  static targets = ["balls", "machine", "rig", "resultRandomNUmber", "prizeSelectUser", "prizeLabel"]
 
   connect() {
     this.BALL_COUNT = 10
@@ -27,8 +28,12 @@ export default class extends Controller {
     this.audioCtx = new (window.AudioContext || window.webkitAudioContext)()
 
     this.createBalls()
-    this.addLeverEvents()
     this.currentPrizeId = null
+    this.subscription = consumer.subscriptions.create("ResultsChannel", {
+      received: (data) => {
+        this.spinAndReveal(data)
+      }
+    })
   }
 
   rect() {
@@ -161,43 +166,6 @@ export default class extends Controller {
     this.raf = requestAnimationFrame(this.step)
   }
 
-  addLeverEvents() {
-    console.log(this)
-    let isPulled = false
-    this.leverTarget.addEventListener('pointerdown', (e) => {
-      e.preventDefault()
-      this.leverTarget.setPointerCapture(e.pointerId)
-      this.leverTarget.classList.add('pulled')
-      isPulled = true
-    })
-    this.leverTarget.addEventListener('pointerup', async (e) => {
-      this.leverTarget.releasePointerCapture(e.pointerId)
-      this.leverTarget.classList.remove('pulled')
-      if (isPulled) {
-        isPulled = false
-        if (this.audioCtx.state === 'suspended') this.audioCtx.resume()
-         try {
-           const res = await fetch(`/user/spin-lucky-number`, {
-             method: "POST",
-             headers: {
-               "Content-Type": "application/json",
-               "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content
-             },
-             body: JSON.stringify({ prize_id: this.prizeSelectUserTarget.value })
-           })
-
-           if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`)
-
-           const data = await res.json()
-           this.spinAndReveal(data)
-           console.log("API result:", data)
-         } catch (error) {
-           console.error('Error fetching number:', error)
-         }
-      }
-    })
-  }
-
   spinAndReveal(data) {
     const numberToShow = data.number ?? 0
     this.reset()
@@ -213,11 +181,11 @@ export default class extends Controller {
       if (data.id) {
         this.addRow(data)
       }
-    }, this.SPIN_MS)
 
-    if (data.remaining_quantity === 1) {
-      this.removePrizeFromSelect(this.currentPrizeId)
-    }
+      setTimeout(async () => {
+        this.prizeLabelTarget.textContent = data.prizeNext.name + " - " + data.prizeNext.description
+      }, 1000);
+    }, this.SPIN_MS)
   }
 
   removePrizeFromSelect(prizeId) {
@@ -226,13 +194,14 @@ export default class extends Controller {
   }
 
   addRow(winner) {
-    const row = document.createElement("tr")
+    const row = document.createElement('div');
+    row.classList.add('card', 'card-winner');
     row.innerHTML = `
-      <td>${winner.name}</td>
-      <td>${winner.number}</td>
-      <td>${winner.prize}</td>
+      <div class="card-winner-number">${winner.number}</div>
+      <div class="card-winner-user-name">${winner.name}</div>
+      <div class="card-winner-prize">${winner.prize}</div>
     `
-    this.resultTableUserTarget.querySelector("tbody").appendChild(row)
+    this.resultRandomNUmberTarget.appendChild(row)
   }
 
   reset() {
@@ -284,5 +253,9 @@ export default class extends Controller {
         }, 700);
       });
     });
+  }
+
+  disconnect() {
+    consumer.subscriptions.remove(this.subscription)
   }
 }

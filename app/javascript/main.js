@@ -7,5 +7,4 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => el.remove(), 500); // remove sau khi ẩn
       }, 5000); // 5 giây
     });
-    console.log(123);
   });

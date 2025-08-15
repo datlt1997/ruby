@@ -1,7 +1,7 @@
 module Admin
   class WinnersController < BaseController
     def index
-      @winners = Winner.includes(:user, :prize, :select_number).order(created_at: :desc).page(params[:page]).per(5)
+      @winners = Winner.includes(:user, :prize, :select_number).page(params[:page]).per(5)
       @prizes = Prize
                   .left_joins(:winners)
                   .group("prizes.id")
@@ -32,12 +32,22 @@ module Admin
         prize_id: @prize.id,
         select_number_id: selected_id
       )
+      prizeNext = Prize.order(:id).find do |prize|
+        prize.winners.count < prize.quantity
+      end
+      ActionCable.server.broadcast("results_channel", {
+        id: winner.id,
+        name: winner.user.full_name,
+        number: winner.select_number.number,
+        prize: winner.prize.name + " - " + winner.prize.description,
+        prizeNext: prizeNext
+      })
 
       render json: {
         id: winner.id,
         name: winner.user.full_name,
         number: winner.select_number.number,
-        prize: winner.prize.name,
+        prize: winner.prize.name + " - " + winner.prize.description,
         remaining_quantity: remaining_quantity
       }
     end
