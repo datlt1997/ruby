@@ -1,0 +1,7 @@
+en:
+  sidebar:
+    admin:
+      users: "Manage Users"
+      prizes: "Manage Prizes"
+      select_numbers: "Manage Numbers"
+      winners: "Manage Winners"

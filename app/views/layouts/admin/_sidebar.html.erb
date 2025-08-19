@@ -11,8 +11,8 @@
     
     <% admin_menu_items.each do |item| %>
       <li class="nav-item">
-        <%= link_to item["path"], class: "nav-link #{'active' if request.path.start_with?(item['path'])}" do %>
-          <%= item["name"] %>
+        <%= link_to localized_path(item["path"]), class: "nav-link #{'active' if request.path.start_with?(item['path'])}" do %>
+          <%= t(item["name"]) %>
         <% end %>
       </li>
     <% end %>

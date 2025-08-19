@@ -1,0 +1,6 @@
+en:
+  users:
+    index:
+      title: "Users list"
+    show:
+      title: "User details"

@@ -1,0 +1,6 @@
+vi:
+  admin:
+    dashboard:
+      title: "Trang chủ Admin"
+    users:
+      manage: "Manage users"

@@ -11,7 +11,7 @@ module Admin
     def require_admin_namespace_access
       unless current_user&.admin?
         reset_session
-        redirect_to admin_login_path, alert: "Không có quyền truy cập admin."
+        redirect_to admin_login_path(locale: I18n.locale), alert: "Không có quyền truy cập admin."
       end
     end
   end

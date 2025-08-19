@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    models:
+      user: "User"
+      admin: "Administrator"
+    attributes:
+      user:
+        name: "Full name"
+        email: "Email"
+      admin:
+        name: "Admin name"
+        email: "Admin email"

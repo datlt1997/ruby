@@ -1,5 +1,5 @@
 admin_menu:
-  - name: "Quản lý người dùng"
+  - name: "sidebar.admin.users"
     path: "/admin/users"
 
 #  - name: "Quản lý bài viết"
@@ -8,11 +8,11 @@ admin_menu:
 #  - name: "Quản lý nhãn"
 #    path: "/admin/tags"
 
-  - name: "Quản lý giải thưởng"
+  - name: "sidebar.admin.prizes"
     path: "/admin/prizes"
 
-  - name: "Quản lý chọn số"
+  - name: "sidebar.admin.select_numbers"
     path: "/admin/select_numbers"
 
-  - name: "Quản lý trúng thưởng"
+  - name: "sidebar.admin.winners"
     path: "/admin/winners"

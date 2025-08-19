@@ -1,0 +1,6 @@
+en:
+  admin:
+    dashboard:
+      title: "Admin Dashboard"
+    users:
+      manage: "Manage users"

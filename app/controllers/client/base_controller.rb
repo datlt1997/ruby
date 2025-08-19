@@ -2,7 +2,7 @@ module Client
   class BaseController < ApplicationController
     before_action :require_login
     before_action :require_user
-    before_action :require_user_namespace_access  
+    before_action :require_user_namespace_access
 
     private
 

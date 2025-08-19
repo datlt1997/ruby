@@ -1,0 +1,7 @@
+vi:
+  sidebar:
+    admin:
+      users: "Quản lý người dùng"
+      prizes: "Quản lý giải thưởng"
+      select_numbers: "Quản lý chọn số"
+      winners: "Quản lý trúng thưởng"

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+  before_action :set_locale
   before_action :redirect_if_wrong_namespace
   
   helper_method :current_user, :logged_in?, :admin?, :normal_user?
@@ -24,27 +24,27 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless logged_in?
-      redirect_to login_redirect_path, alert: "Bạn cần đăng nhập trước."
+      redirect_to login_redirect_path(locale: I18n.locale), alert: "Bạn cần đăng nhập trước."
     end
   end
 
   def require_admin
     unless admin?
-      redirect_to root_path, alert: "Bạn không có quyền truy cập (admin)."
+      redirect_to root_path(locale: I18n.locale), alert: "Bạn không có quyền truy cập (admin)."
     end
   end
 
   def require_user
     unless normal_user?
-      redirect_to root_path, alert: "Bạn không có quyền truy cập (user)."
+      redirect_to root_path(locale: I18n.locale), alert: "Bạn không có quyền truy cập (user)."
     end
   end
 
   def login_redirect_path
     if request.path.start_with?("/admin")
-      admin_login_path
+      admin_login_path(locale: I18n.locale)
     else
-      user_login_path
+      user_login_path(locale: I18n.locale)
     end
   end
 
@@ -52,12 +52,22 @@ class ApplicationController < ActionController::Base
     return unless logged_in?
 
     path = request.path
+    normalized_path = path.sub(/^\/(#{I18n.available_locales.join('|')})(?=\/|$)/, '')
 
-    if admin? && !path.start_with?('/admin') && !path.start_with?('/logout')
-      redirect_to admin_root_path
-    elsif normal_user? && !path.start_with?('/user') && !path.start_with?('/logout')
-      redirect_to user_root_path
+    if admin? && !normalized_path.start_with?('/admin') && !normalized_path.start_with?('/logout')
+      redirect_to admin_root_path(locale: I18n.locale)
+    elsif normal_user? && !normalized_path.start_with?('/user') && !normalized_path.start_with?('/logout')
+      redirect_to user_root_path(locale: I18n.locale)
     end
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
+    session[:locale] = I18n.locale
+  end
+
+  def default_url_options
+    { locale: I18n.locale }
   end
 end
 

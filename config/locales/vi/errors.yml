@@ -1,0 +1,6 @@
+vi:
+  errors:
+    messages:
+      blank: "can't be blank"
+      invalid: "is invalid"
+      taken: "has already been taken"
