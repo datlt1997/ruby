@@ -15,7 +15,7 @@
 <body>
      <%= render 'layouts/notification' %>
     <main>
-        <div class="user-content">
+        <div class="<%= current_user ? 'user-content' : '' %>">
             <div class="container-fluid">
                 <%= yield %>
             <div>
