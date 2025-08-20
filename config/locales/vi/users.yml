@@ -1,6 +1,19 @@
 vi:
   users:
-    index:
-      title: "Users list"
-    show:
-      title: "User details"
+    select_number:
+      title: "Màn hình chọn số"
+      btn_select: "Xác nhận chọn số"
+      btn_random_number: "Quay số"
+    login:
+      title_page: "Đăng nhập"
+      email:
+        title: "Email"
+        placeholder: "Nhập Email"
+      password:
+        title: "Mật khẩu"
+        placeholder: "Nhập mật khẩu"
+    result:
+      title: "Màn hình quay thưởng"
+      btn_select: "Chọn số"
+      prize: "Giải thưởng"
+      prize_list: "Danh sách giải thưởng"

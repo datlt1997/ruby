@@ -63,3 +63,2511 @@ Unsubscribing from channel: {"channel":"ResultsChannel"}
 ResultsChannel stopped streaming from results_channel
 ResultsChannel is transmitting the subscription confirmation
 ResultsChannel is streaming from results_channel
+Started GET "/" for 172.23.0.1 at 2025-08-20 02:44:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (61.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 11 pending migrations:
+
+db/migrate/20250628155419_create_posts.rb
+db/migrate/20250711025412_add_column_into_post.rb
+db/migrate/20250711033118_create_active_storage_tables.active_storage.rb
+db/migrate/20250805012402_create_users.rb
+db/migrate/20250807070200_add_short_description_to_posts.rb
+db/migrate/20250807070216_create_tags.rb
+db/migrate/20250807070225_create_post_tags.rb
+db/migrate/20250812073320_create_select_numbers.rb
+db/migrate/20250812073340_create_prizes.rb
+db/migrate/20250812073358_create_winners.rb
+db/migrate/20250812075333_add_column_into_users.rb
+
+
+):
+  
+activerecord (7.1.5.1) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.5.1) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.5.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.5.1) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.5.1) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.5.1) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.1) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (2.2.17) lib/rack/method_override.rb:24:in `call'
+rack (2.2.17) lib/rack/runtime.rb:22:in `call'
+activesupport (7.1.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (2.2.17) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.1) lib/rails/engine.rb:536:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('8409879050109390000', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (13.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2025-08-20 02:44:38.864814', '2025-08-20 02:44:38.864817')[0m
+Migrating to CreatePosts (20250628155419)
+  [1m[35m (53.4ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250628155419')[0m
+Migrating to AddColumnIntoPost (20250711025412)
+  [1m[35m (80.8ms)[0m  [1m[35mALTER TABLE `posts` ADD `image` varchar(255)[0m
+  [1m[35m (117.9ms)[0m  [1m[35mALTER TABLE `posts` ADD `views_count` int[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250711025412')[0m
+Migrating to CreateActiveStorageTables (20250711033118)
+  [1m[35m (48.2ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `service_name` varchar(255) NOT NULL, `byte_size` bigint NOT NULL, `checksum` varchar(255), `created_at` datetime(6) NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key` (`key`))[0m
+  [1m[35m (118.3ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, INDEX `index_active_storage_attachments_on_blob_id` (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness` (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (77.1ms)[0m  [1m[35mCREATE TABLE `active_storage_variant_records` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `blob_id` bigint NOT NULL, `variation_digest` varchar(255) NOT NULL, UNIQUE INDEX `index_active_storage_variant_records_uniqueness` (`blob_id`, `variation_digest`), CONSTRAINT `fk_rails_993965df05`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250711033118')[0m
+Migrating to CreateUsers (20250805012402)
+  [1m[35m (55.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `password_digest` varchar(255), `role` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250805012402')[0m
+Migrating to AddShortDescriptionToPosts (20250807070200)
+  [1m[35m (136.3ms)[0m  [1m[35mALTER TABLE `posts` ADD `short_description` text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250807070200')[0m
+Migrating to CreateTags (20250807070216)
+  [1m[35m (41.3ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250807070216')[0m
+Migrating to CreatePostTags (20250807070225)
+  [1m[35m (97.1ms)[0m  [1m[35mCREATE TABLE `post_tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `post_id` bigint NOT NULL, `tag_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_post_tags_on_post_id` (`post_id`), INDEX `index_post_tags_on_tag_id` (`tag_id`), CONSTRAINT `fk_rails_fdf74b486b`
+FOREIGN KEY (`post_id`)
+  REFERENCES `posts` (`id`)
+, CONSTRAINT `fk_rails_c9d8c5063e`
+FOREIGN KEY (`tag_id`)
+  REFERENCES `tags` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250807070225')[0m
+Migrating to CreateSelectNumbers (20250812073320)
+  [1m[35m (44.6ms)[0m  [1m[35mCREATE TABLE `select_numbers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint NOT NULL, `number` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_select_numbers_on_user_id` (`user_id`), CONSTRAINT `fk_rails_76f7083753`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250812073320')[0m
+Migrating to CreatePrizes (20250812073340)
+  [1m[35m (44.1ms)[0m  [1m[35mCREATE TABLE `prizes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `quantity` int NOT NULL, `description` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250812073340')[0m
+Migrating to CreateWinners (20250812073358)
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE TABLE `winners` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `select_number_id` bigint NOT NULL, `prize_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_winners_on_select_number_id` (`select_number_id`), INDEX `index_winners_on_prize_id` (`prize_id`), CONSTRAINT `fk_rails_c401d44b65`
+FOREIGN KEY (`select_number_id`)
+  REFERENCES `select_numbers` (`id`)
+, CONSTRAINT `fk_rails_ad61b22239`
+FOREIGN KEY (`prize_id`)
+  REFERENCES `prizes` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250812073358')[0m
+Migrating to AddColumnIntoUsers (20250812075333)
+  [1m[35m (93.2ms)[0m  [1m[35mALTER TABLE `users` ADD `full_name` text[0m
+  [1m[35m (203.0ms)[0m  [1m[35mALTER TABLE `users` ADD `phone` text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (8.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250812075333')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8409879050109390000')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 172.23.0.1 at 2025-08-20 02:45:07 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 781)
+  Rendered layouts/_notification.html.erb (Duration: 0.6ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 9091.0ms | Allocations: 256208)
+Completed 200 OK in 9113ms (Views: 9100.0ms | ActiveRecord: 0.0ms | Allocations: 259600)
+
+
+Request took 9135.48 ms
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:45:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:45:17 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 43.38 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/user/login" for 172.23.0.1 at 2025-08-20 02:45:27 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2266)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 8680)
+Completed 200 OK in 78ms (Views: 23.6ms | ActiveRecord: 5.9ms | Allocations: 25319)
+
+
+Request took 82.14 ms
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:48:09 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 728)
+  Rendered layouts/_notification.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 7279)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 8380)
+
+
+Request took 28.45 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:48:09 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:48:09 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:48:09 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.87 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started POST "/admin/login" for 172.23.0.1 at 2025-08-20 02:48:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc@gmail.com' AND `users`.`role` = 1 LIMIT 1[0m
+  ↳ app/controllers/admin/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/admin/login
+Completed 302 Found in 230ms (ActiveRecord: 0.4ms | Allocations: 6665)
+
+
+Request took 232.94 ms
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:48:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 351)
+  Rendered layouts/_notification.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6951)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 7857)
+
+
+Request took 12.01 ms
+Started POST "/admin/login" for 172.23.0.1 at 2025-08-20 02:52:06 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc@gmail.com' AND `users`.`role` = 1 LIMIT 1[0m
+  ↳ app/controllers/admin/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/admin/login
+Completed 302 Found in 206ms (ActiveRecord: 0.3ms | Allocations: 1341)
+
+
+Request took 207.44 ms
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:52:06 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 348)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 6904)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 7795)
+
+
+Request took 11.47 ms
+Started POST "/admin/login" for 172.23.0.1 at 2025-08-20 02:53:07 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc@gmail.com' AND `users`.`role` = 1 LIMIT 1[0m
+  ↳ app/controllers/admin/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/admin/login
+Completed 302 Found in 218ms (ActiveRecord: 0.3ms | Allocations: 1313)
+
+
+Request took 222.22 ms
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:53:07 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 348)
+  Rendered layouts/_notification.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6900)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 7776)
+
+
+Request took 9.23 ms
+Started POST "/admin/login" for 172.23.0.1 at 2025-08-20 02:53:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc@gmail.com' AND `users`.`role` = 1 LIMIT 1[0m
+  ↳ app/controllers/admin/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/admin/users
+Completed 302 Found in 271ms (ActiveRecord: 0.3ms | Allocations: 1442)
+
+
+Request took 272.2 ms
+Started GET "/admin/users" for 172.23.0.1 at 2025-08-20 02:53:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 25.8ms | Allocations: 8822)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.6ms | Allocations: 828)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 1.0ms | Allocations: 540)
+  Rendered layout layouts/admin.html.erb (Duration: 35.8ms | Allocations: 17346)
+Completed 200 OK in 40ms (Views: 34.2ms | ActiveRecord: 3.1ms | Allocations: 19507)
+
+
+Request took 49.42 ms
+Started GET "/admin/prizes" for 172.23.0.1 at 2025-08-20 02:53:48 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PrizesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/prizes/index.html.erb within layouts/admin
+  [1m[36mPrize Load (0.4ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/admin/prizes/index.html.erb:18
+  Rendered admin/prizes/index.html.erb within layouts/admin (Duration: 2.1ms | Allocations: 939)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.9ms | Allocations: 537)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 10.1ms | Allocations: 8336)
+Completed 200 OK in 34ms (Views: 10.2ms | ActiveRecord: 1.7ms | Allocations: 19319)
+
+
+Request took 37.03 ms
+Started GET "/admin/select_numbers" for 172.23.0.1 at 2025-08-20 02:53:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SelectNumbersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/select_numbers/index.html.erb within layouts/admin
+  [1m[36mSelectNumber Load (0.5ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` ORDER BY `select_numbers`.`created_at` DESC LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/select_numbers/index.html.erb:15
+  Rendered admin/select_numbers/index.html.erb within layouts/admin (Duration: 5.0ms | Allocations: 1956)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.9ms | Allocations: 552)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.5ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 14.1ms | Allocations: 9369)
+Completed 200 OK in 33ms (Views: 14.2ms | ActiveRecord: 2.1ms | Allocations: 12396)
+
+
+Request took 36.35 ms
+Started GET "/admin/winners" for 172.23.0.1 at 2025-08-20 02:53:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::WinnersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/winners/index.html.erb within layouts/admin
+  [1m[36mWinner Load (0.6ms)[0m  [1m[34mSELECT `winners`.* FROM `winners` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/winners/index.html.erb:16
+  [1m[36mPrize Load (0.5ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` LEFT OUTER JOIN `winners` ON `winners`.`prize_id` = `prizes`.`id` GROUP BY `prizes`.`id` HAVING (COUNT(winners.id) < prizes.quantity)[0m
+  ↳ app/views/admin/winners/index.html.erb:32
+  Rendered admin/winners/index.html.erb within layouts/admin (Duration: 14.0ms | Allocations: 4669)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.0ms | Allocations: 552)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.8ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 24.2ms | Allocations: 12082)
+Completed 200 OK in 50ms (Views: 22.5ms | ActiveRecord: 2.8ms | Allocations: 15062)
+
+
+Request took 53.47 ms
+Started GET "/admin/users" for 172.23.0.1 at 2025-08-20 02:53:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 4.5ms | Allocations: 1251)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.0ms | Allocations: 535)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.6ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 16.5ms | Allocations: 8636)
+Completed 200 OK in 28ms (Views: 15.8ms | ActiveRecord: 5.9ms | Allocations: 9886)
+
+
+Request took 28.65 ms
+Started DELETE "/admin/logout" for 172.23.0.1 at 2025-08-20 02:55:31 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:8083/admin/login
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1187)
+
+
+Request took 3.37 ms
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:55:31 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 349)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 6901)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 7761)
+
+
+Request took 10.42 ms
+Started GET "/user/login" for 172.23.0.1 at 2025-08-20 02:55:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 908)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7326)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 8172)
+
+
+Request took 25.75 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:55:36 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:55:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:55:36 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.16 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started POST "/user/login" for 172.23.0.1 at 2025-08-20 02:55:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc1@gmail.com' AND `users`.`role` = 0 LIMIT 1[0m
+  ↳ app/controllers/client/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/user
+Completed 302 Found in 259ms (ActiveRecord: 0.4ms | Allocations: 1428)
+
+
+Request took 260.48 ms
+Started GET "/user" for 172.23.0.1 at 2025-08-20 02:55:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.3ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.3ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1791)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 8483)
+Completed 200 OK in 19ms (Views: 8.6ms | ActiveRecord: 1.7ms | Allocations: 14203)
+
+
+Request took 28.29 ms
+Started POST "/user/choose-number" for 172.23.0.1 at 2025-08-20 02:55:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#choose_number as */*
+  Parameters: {"number"=>"77", "dashboard"=>{"number"=>"77"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:16:in `choose_number'
+  [1m[36mSelectNumber Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `select_numbers` WHERE `select_numbers`.`number` = 77 LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:21:in `choose_number'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/client/dashboard_controller.rb:24:in `choose_number'
+  [1m[36mSelectNumber Create (1.7ms)[0m  [1m[32mINSERT INTO `select_numbers` (`user_id`, `number`, `created_at`, `updated_at`) VALUES (2, 77, '2025-08-20 02:55:47.917150', '2025-08-20 02:55:47.917150')[0m
+  ↳ app/controllers/client/dashboard_controller.rb:24:in `choose_number'
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/client/dashboard_controller.rb:24:in `choose_number'
+Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 12.9ms | Allocations: 9114)
+
+
+Request took 33.64 ms
+Started GET "/user/results" for 172.23.0.1 at 2025-08-20 02:55:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#results as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mPrize Load (0.4ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`id` ASC[0m
+  ↳ app/controllers/client/dashboard_controller.rb:31:in `results'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/results.html.erb within layouts/application
+  Rendered client/dashboard/results.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1265)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1356)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 3205)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    11:     </div>
+    12:     <div class="prize">
+    13:       <div class="prize-lable">Giải Thưởng</div>
+    14:       <div class="prize-name" data-lotto-target="prizeLabel" ><%= @prizeNext.name + " - " + @prizeNext.description %></div>
+    15:     </div>
+    16:   </div>
+    17:   <div class="result mt-5">
+  
+app/views/client/dashboard/results.html.erb:14
+lib/middleware/request_timer.rb:10:in `call'
+Started GET "/user" for 172.23.0.1 at 2025-08-20 02:56:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.2ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (1.3ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1207)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 7996)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 1.8ms | Allocations: 10388)
+
+
+Request took 16.32 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:56:43 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:56:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:56:43 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 16.03 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started DELETE "/user/logout" for 172.23.0.1 at 2025-08-20 02:56:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:8083/user/login
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1177)
+
+
+Request took 9.57 ms
+Started GET "/user/login" for 172.23.0.1 at 2025-08-20 02:56:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 908)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 7315)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 8196)
+
+
+Request took 11.43 ms
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:56:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 348)
+  Rendered layouts/_notification.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6896)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 7751)
+
+
+Request took 12.16 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:56:49 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:56:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:56:49 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.71 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started POST "/admin/login" for 172.23.0.1 at 2025-08-20 02:56:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc@gmail.com' AND `users`.`role` = 1 LIMIT 1[0m
+  ↳ app/controllers/admin/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/admin/users
+Completed 302 Found in 350ms (ActiveRecord: 0.4ms | Allocations: 1368)
+
+
+Request took 350.89 ms
+Started GET "/admin/users" for 172.23.0.1 at 2025-08-20 02:56:55 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 4.2ms | Allocations: 2158)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.7ms | Allocations: 535)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.2ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 11.0ms | Allocations: 9546)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 1.2ms | Allocations: 10825)
+
+
+Request took 14.34 ms
+Started GET "/admin/prizes" for 172.23.0.1 at 2025-08-20 02:56:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PrizesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/prizes/index.html.erb within layouts/admin
+  [1m[36mPrize Load (0.3ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/admin/prizes/index.html.erb:18
+  Rendered admin/prizes/index.html.erb within layouts/admin (Duration: 1.1ms | Allocations: 510)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.8ms | Allocations: 535)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 13.6ms | Allocations: 7891)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.6ms | Allocations: 9276)
+
+
+Request took 17.63 ms
+Started GET "/admin/prizes/new" for 172.23.0.1 at 2025-08-20 02:56:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PrizesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/prizes/new.html.erb within layouts/admin
+  Rendered admin/prizes/_form.html.erb (Duration: 16.0ms | Allocations: 9452)
+  Rendered admin/prizes/new.html.erb within layouts/admin (Duration: 16.7ms | Allocations: 9729)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 2.9ms | Allocations: 541)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.4ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 27.5ms | Allocations: 17238)
+Completed 200 OK in 35ms (Views: 28.0ms | ActiveRecord: 0.3ms | Allocations: 22300)
+
+
+Request took 35.81 ms
+Started POST "/admin/prizes" for 172.23.0.1 at 2025-08-20 02:57:10 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PrizesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "prize"=>{"name"=>"Giải Khuyến Khích", "quantity"=>"10", "description"=>"máy ảnh"}, "commit"=>"Create"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/prizes_controller.rb:29:in `block in create'
+  [1m[36mPrize Create (1.0ms)[0m  [1m[32mINSERT INTO `prizes` (`name`, `quantity`, `description`, `created_at`, `updated_at`) VALUES ('Giải Khuyến Khích', 10, 'máy ảnh', '2025-08-20 02:57:10.331631', '2025-08-20 02:57:10.331631')[0m
+  ↳ app/controllers/admin/prizes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/prizes_controller.rb:29:in `block in create'
+Redirected to http://localhost:8083/admin/prizes
+Completed 302 Found in 13ms (ActiveRecord: 5.2ms | Allocations: 3139)
+
+
+Request took 13.78 ms
+Started GET "/admin/prizes" for 172.23.0.1 at 2025-08-20 02:57:10 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PrizesController#index as TURBO_STREAM
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/prizes/index.html.erb within layouts/admin
+  [1m[36mPrize Load (0.5ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/admin/prizes/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Prize' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/admin/prizes/index.html.erb:24
+  Rendered admin/prizes/index.html.erb within layouts/admin (Duration: 3.9ms | Allocations: 1460)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.7ms | Allocations: 535)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.4ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 13.2ms | Allocations: 8844)
+Completed 200 OK in 23ms (Views: 12.8ms | ActiveRecord: 4.5ms | Allocations: 10270)
+
+
+Request took 24.65 ms
+Started GET "/admin/select_numbers" for 172.23.0.1 at 2025-08-20 02:57:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SelectNumbersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/select_numbers/index.html.erb within layouts/admin
+  [1m[36mSelectNumber Load (0.4ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` ORDER BY `select_numbers`.`created_at` DESC LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/select_numbers/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  ↳ app/views/admin/select_numbers/index.html.erb:15
+  Rendered admin/select_numbers/index.html.erb within layouts/admin (Duration: 7.4ms | Allocations: 3082)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.8ms | Allocations: 544)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.2ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 15.2ms | Allocations: 10473)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 1.1ms | Allocations: 11872)
+
+
+Request took 19.78 ms
+Started DELETE "/admin/logout" for 172.23.0.1 at 2025-08-20 02:57:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:8083/admin/login
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1178)
+
+
+Request took 4.32 ms
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:57:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 349)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 6901)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 7783)
+
+
+Request took 9.99 ms
+Started GET "/user/login" for 172.23.0.1 at 2025-08-20 02:57:21 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 902)
+  Rendered layouts/_notification.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7305)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 8185)
+
+
+Request took 18.82 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:57:21 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:57:21 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:57:21 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 5.94 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started POST "/user/login" for 172.23.0.1 at 2025-08-20 02:57:29 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc1@gmail.com' AND `users`.`role` = 0 LIMIT 1[0m
+  ↳ app/controllers/client/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/user
+Completed 302 Found in 257ms (ActiveRecord: 0.4ms | Allocations: 1378)
+
+
+Request took 258.15 ms
+Started GET "/user" for 172.23.0.1 at 2025-08-20 02:57:29 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.3ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.3ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1204)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 7877)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.9ms | Allocations: 10258)
+
+
+Request took 14.15 ms
+Started GET "/user/results" for 172.23.0.1 at 2025-08-20 02:57:32 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#results as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mPrize Load (0.6ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`id` ASC[0m
+  ↳ app/controllers/client/dashboard_controller.rb:31:in `results'
+  [1m[36mWinner Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `winners` WHERE `winners`.`prize_id` = 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:32:in `block in results'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/results.html.erb within layouts/application
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners`[0m
+  ↳ app/views/client/dashboard/results.html.erb:20
+  Rendered client/dashboard/results.html.erb within layouts/application (Duration: 2.8ms | Allocations: 586)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 7256)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 2.6ms | Allocations: 10066)
+
+
+Request took 20.12 ms
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:57:32 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:57:32 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.81 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started DELETE "/user/logout" for 172.23.0.1 at 2025-08-20 02:57:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:8083/user/login
+Completed 302 Found in 10ms (ActiveRecord: 6.9ms | Allocations: 1172)
+
+
+Request took 10.85 ms
+Started GET "/user/login" for 172.23.0.1 at 2025-08-20 02:57:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 902)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 7309)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8188)
+
+
+Request took 13.01 ms
+Unsubscribing from channel: {"channel":"ResultsChannel"}
+ResultsChannel stopped streaming from results_channel
+Started GET "/admin/login" for 172.23.0.1 at 2025-08-20 02:57:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 348)
+  Rendered layouts/_notification.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 6896)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 7755)
+
+
+Request took 10.98 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:57:41 +0000
+ResultsChannel stopped streaming from results_channel
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:57:41 +0000
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 02:57:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 02:57:41 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.12 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started POST "/admin/login" for 172.23.0.1 at 2025-08-20 02:57:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc@gmail.com' AND `users`.`role` = 1 LIMIT 1[0m
+  ↳ app/controllers/admin/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/admin/users
+Completed 302 Found in 257ms (ActiveRecord: 0.3ms | Allocations: 1370)
+
+
+Request took 257.78 ms
+Started GET "/admin/users" for 172.23.0.1 at 2025-08-20 02:57:49 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 5.1ms | Allocations: 2156)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.0ms | Allocations: 535)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 180)
+  Rendered layout layouts/admin.html.erb (Duration: 14.3ms | Allocations: 9544)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.4ms | Allocations: 10824)
+
+
+Request took 18.11 ms
+Started GET "/admin/users" for 172.23.0.1 at 2025-08-20 03:08:13 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 12.3ms | Allocations: 5469)
+  Rendered layouts/_notification.html.erb (Duration: 2.1ms | Allocations: 227)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 3.0ms | Allocations: 1009)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 1.3ms | Allocations: 580)
+  Rendered layout layouts/admin.html.erb (Duration: 173.9ms | Allocations: 105299)
+Completed 200 OK in 306ms (Views: 179.8ms | ActiveRecord: 1.8ms | Allocations: 130232)
+
+
+Request took 337.7 ms
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:14 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:14 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.63 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/users" for 172.23.0.1 at 2025-08-20 03:08:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/vi/users"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:17 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:26 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.47 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/admin/users" for 172.23.0.1 at 2025-08-20 03:08:27 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 7.0ms | Allocations: 2275)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.9ms | Allocations: 631)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 9.0ms | Allocations: 228)
+  Rendered layout layouts/admin.html.erb (Duration: 25.0ms | Allocations: 9800)
+Completed 200 OK in 30ms (Views: 24.0ms | ActiveRecord: 2.1ms | Allocations: 11192)
+
+
+Request took 31.32 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:27 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:27 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:27 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.79 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/users" for 172.23.0.1 at 2025-08-20 03:08:30 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.07 ms
+  
+ActionController::RoutingError (No route matches [GET] "/vi/users"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:30 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:34 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.94 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/admin/prizes" for 172.23.0.1 at 2025-08-20 03:08:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PrizesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/prizes/index.html.erb within layouts/admin
+  [1m[36mPrize Load (0.4ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/admin/prizes/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Prize' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/admin/prizes/index.html.erb:24
+  Rendered admin/prizes/index.html.erb within layouts/admin (Duration: 6.4ms | Allocations: 5020)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.1ms | Allocations: 637)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 227)
+  Rendered layout layouts/admin.html.erb (Duration: 14.4ms | Allocations: 12673)
+Completed 200 OK in 29ms (Views: 14.2ms | ActiveRecord: 1.1ms | Allocations: 19291)
+
+
+Request took 31.68 ms
+Started GET "/en/admin/" for 172.23.0.1 at 2025-08-20 03:08:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::DashboardController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/dashboard/index.html.erb within layouts/admin
+  Rendered admin/dashboard/index.html.erb within layouts/admin (Duration: 0.5ms | Allocations: 182)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.8ms | Allocations: 647)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 227)
+  Rendered layout layouts/admin.html.erb (Duration: 11.0ms | Allocations: 7790)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 9390)
+
+
+Request took 18.91 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:43 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:43 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.0 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/admin/" for 172.23.0.1 at 2025-08-20 03:08:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::DashboardController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/dashboard/index.html.erb within layouts/admin
+  Rendered admin/dashboard/index.html.erb within layouts/admin (Duration: 0.1ms | Allocations: 51)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 2.1ms | Allocations: 641)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 1.1ms | Allocations: 235)
+  Rendered layout layouts/admin.html.erb (Duration: 10.3ms | Allocations: 7609)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 9084)
+
+
+Request took 14.8 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:46 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:46 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.69 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/admin/users" for 172.23.0.1 at 2025-08-20 03:08:48 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 4.4ms | Allocations: 2275)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.8ms | Allocations: 631)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/admin.html.erb (Duration: 13.0ms | Allocations: 9806)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 1.1ms | Allocations: 11203)
+
+
+Request took 16.41 ms
+Started GET "/en/admin/users" for 172.23.0.1 at 2025-08-20 03:08:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 7.0ms | Allocations: 2275)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.9ms | Allocations: 631)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 227)
+  Rendered layout layouts/admin.html.erb (Duration: 17.4ms | Allocations: 9798)
+Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 2.0ms | Allocations: 11209)
+
+
+Request took 26.31 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:51 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:51 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.82 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/admin/users" for 172.23.0.1 at 2025-08-20 03:08:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/admin/users/index.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'avatar' LIMIT 1[0m
+  ↳ app/views/admin/users/index.html.erb:26
+  Rendered admin/users/index.html.erb within layouts/admin (Duration: 5.5ms | Allocations: 2276)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.2ms | Allocations: 631)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/admin.html.erb (Duration: 16.1ms | Allocations: 9807)
+Completed 200 OK in 28ms (Views: 15.3ms | ActiveRecord: 1.4ms | Allocations: 11209)
+
+
+Request took 28.56 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:54 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:08:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:08:54 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.85 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/admin/prizes" for 172.23.0.1 at 2025-08-20 03:08:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PrizesController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/prizes/index.html.erb within layouts/admin
+  [1m[36mPrize Load (3.9ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/admin/prizes/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Prize' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/admin/prizes/index.html.erb:24
+  Rendered admin/prizes/index.html.erb within layouts/admin (Duration: 8.0ms | Allocations: 1519)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.8ms | Allocations: 631)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.6ms | Allocations: 235)
+  Rendered layout layouts/admin.html.erb (Duration: 25.2ms | Allocations: 9050)
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 4.7ms | Allocations: 10584)
+
+
+Request took 30.12 ms
+Started GET "/vi/admin/select_numbers" for 172.23.0.1 at 2025-08-20 03:08:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SelectNumbersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/select_numbers/index.html.erb within layouts/admin
+  [1m[36mSelectNumber Load (0.6ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` ORDER BY `select_numbers`.`created_at` DESC LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/select_numbers/index.html.erb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  ↳ app/views/admin/select_numbers/index.html.erb:15
+  Rendered admin/select_numbers/index.html.erb within layouts/admin (Duration: 7.3ms | Allocations: 4343)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.8ms | Allocations: 646)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/admin.html.erb (Duration: 16.3ms | Allocations: 11943)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 1.2ms | Allocations: 14808)
+
+
+Request took 30.69 ms
+Started GET "/vi/admin/winners" for 172.23.0.1 at 2025-08-20 03:08:58 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::WinnersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/winners/index.html.erb within layouts/admin
+  [1m[36mWinner Load (0.4ms)[0m  [1m[34mSELECT `winners`.* FROM `winners` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/winners/index.html.erb:16
+  [1m[36mPrize Load (0.4ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` LEFT OUTER JOIN `winners` ON `winners`.`prize_id` = `prizes`.`id` GROUP BY `prizes`.`id` HAVING (COUNT(winners.id) < prizes.quantity)[0m
+  ↳ app/views/admin/winners/index.html.erb:32
+  Rendered admin/winners/index.html.erb within layouts/admin (Duration: 3.8ms | Allocations: 2209)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 1.0ms | Allocations: 646)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/admin.html.erb (Duration: 12.2ms | Allocations: 9772)
+Completed 200 OK in 23ms (Views: 11.9ms | ActiveRecord: 1.2ms | Allocations: 12812)
+
+
+Request took 25.96 ms
+Started GET "/en/admin/winners" for 172.23.0.1 at 2025-08-20 03:09:01 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::WinnersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/winners/index.html.erb within layouts/admin
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/winners/index.html.erb:16
+  [1m[36mPrize Load (0.8ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` LEFT OUTER JOIN `winners` ON `winners`.`prize_id` = `prizes`.`id` GROUP BY `prizes`.`id` HAVING (COUNT(winners.id) < prizes.quantity)[0m
+  ↳ app/views/admin/winners/index.html.erb:32
+  Rendered admin/winners/index.html.erb within layouts/admin (Duration: 3.7ms | Allocations: 1160)
+  Rendered layouts/_notification.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 0.8ms | Allocations: 641)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 227)
+  Rendered layout layouts/admin.html.erb (Duration: 11.0ms | Allocations: 8695)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 1.5ms | Allocations: 10269)
+
+
+Request took 15.82 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:09:01 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:09:01 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:09:01 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 3.52 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/admin/winners" for 172.23.0.1 at 2025-08-20 03:10:42 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::WinnersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/winners/index.html.erb within layouts/admin
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/winners/index.html.erb:16
+  [1m[36mPrize Load (0.4ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` LEFT OUTER JOIN `winners` ON `winners`.`prize_id` = `prizes`.`id` GROUP BY `prizes`.`id` HAVING (COUNT(winners.id) < prizes.quantity)[0m
+  ↳ app/views/admin/winners/index.html.erb:32
+  Rendered admin/winners/index.html.erb within layouts/admin (Duration: 3.0ms | Allocations: 1160)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 3.0ms | Allocations: 647)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 0.3ms | Allocations: 227)
+  Rendered layout layouts/admin.html.erb (Duration: 17.9ms | Allocations: 8809)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.0ms | Allocations: 10364)
+
+
+Request took 22.96 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:10:42 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:10:42 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:10:42 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.83 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:10:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/en/admin/winners" for 172.23.0.1 at 2025-08-20 03:13:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::WinnersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/winners/index.html.erb within layouts/admin
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/admin/winners/index.html.erb:16
+  [1m[36mPrize Load (0.4ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` LEFT OUTER JOIN `winners` ON `winners`.`prize_id` = `prizes`.`id` GROUP BY `prizes`.`id` HAVING (COUNT(winners.id) < prizes.quantity)[0m
+  ↳ app/views/admin/winners/index.html.erb:32
+  Rendered admin/winners/index.html.erb within layouts/admin (Duration: 9.2ms | Allocations: 4996)
+  Rendered layouts/_notification.html.erb (Duration: 5.7ms | Allocations: 224)
+  Rendered layouts/admin/_navbar.html.erb (Duration: 2.3ms | Allocations: 1024)
+  Rendered layouts/admin/_sidebar.html.erb (Duration: 1.4ms | Allocations: 448)
+  Rendered layout layouts/admin.html.erb (Duration: 111.3ms | Allocations: 46396)
+Completed 200 OK in 144ms (Views: 109.6ms | ActiveRecord: 6.3ms | Allocations: 61931)
+
+
+Request took 170.0 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:13:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.15 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:13:35 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:13:35 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 15.94 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started DELETE "/en/admin/logout" for 172.23.0.1 at 2025-08-20 03:17:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:8083/en/admin/login
+Completed 302 Found in 147ms (ActiveRecord: 3.3ms | Allocations: 26301)
+
+
+Request took 163.49 ms
+Started GET "/en/admin/login" for 172.23.0.1 at 2025-08-20 03:17:34 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as TURBO_STREAM
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 806)
+  Rendered layouts/_notification.html.erb (Duration: 0.6ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 40590)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms | Allocations: 42401)
+
+
+Request took 60.19 ms
+Started GET "/en/user/login" for 172.23.0.1 at 2025-08-20 03:17:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1373)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 7876)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 9006)
+
+
+Request took 20.33 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:17:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:17:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:17:39 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 86.87 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started POST "/en/user/login" for 172.23.0.1 at 2025-08-20 03:17:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập", "locale"=>"en"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc1@gmail.com' AND `users`.`role` = 0 LIMIT 1[0m
+  ↳ app/controllers/client/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/en/user
+Completed 302 Found in 405ms (ActiveRecord: 0.4ms | Allocations: 2316)
+
+
+Request took 416.63 ms
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:17:44 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as TURBO_STREAM
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.3ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.7ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1621)
+  Rendered layouts/_notification.html.erb (Duration: 0.8ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 8505)
+Completed 200 OK in 43ms (Views: 23.3ms | ActiveRecord: 3.3ms | Allocations: 16123)
+
+
+Request took 47.55 ms
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:18:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.4ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.4ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1639)
+  Rendered layouts/_notification.html.erb (Duration: 14.4ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | Allocations: 41622)
+Completed 200 OK in 104ms (Views: 68.3ms | ActiveRecord: 5.5ms | Allocations: 59946)
+
+
+Request took 137.65 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:18:36 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:18:37 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:18:37 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 14.2 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:18:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.3ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.4ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1229)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 8115)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 1.0ms | Allocations: 10677)
+
+
+Request took 18.37 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:18:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:18:39 +0000
+ResultsChannel stopped streaming from results_channel
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:18:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:18:39 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.65 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:18:53 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.3ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.6ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1229)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8121)
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 1.2ms | Allocations: 10655)
+
+
+Request took 22.02 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:18:53 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:18:53 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.1 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:18:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:18:54 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.09 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:19:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.4ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.5ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1229)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 8115)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 1.4ms | Allocations: 10625)
+
+
+Request took 21.14 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:19:03 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:19:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.1 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:19:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:19:03 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 4.78 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:19:59 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.5ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.6ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1639)
+  Rendered layouts/_notification.html.erb (Duration: 1.0ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 41675)
+Completed 200 OK in 335ms (Views: 69.3ms | ActiveRecord: 7.6ms | Allocations: 74692)
+
+
+Request took 354.34 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:20:00 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:20:00 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:20:00 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 12.96 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:20:02 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.4ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.4ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1229)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 8122)
+Completed 200 OK in 35ms (Views: 11.0ms | ActiveRecord: 1.2ms | Allocations: 10686)
+
+
+Request took 36.16 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:20:02 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:20:02 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:20:03 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:20:03 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.8 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started DELETE "/en/user/logout" for 172.23.0.1 at 2025-08-20 03:25:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "locale"=>"en"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:8083/en/user/login
+Completed 302 Found in 26ms (ActiveRecord: 0.9ms | Allocations: 1619)
+
+
+Request took 89.7 ms
+Started GET "/en/user/login" for 172.23.0.1 at 2025-08-20 03:25:20 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as TURBO_STREAM
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1365)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 7927)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 9096)
+
+
+Request took 31.76 ms
+Started GET "/en/user/login" for 172.23.0.1 at 2025-08-20 03:26:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1475)
+  Rendered layouts/_notification.html.erb (Duration: 11.7ms | Allocations: 214)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 41194)
+Completed 200 OK in 97ms (Views: 52.6ms | ActiveRecord: 16.1ms | Allocations: 52585)
+
+
+Request took 117.73 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:26:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.11 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:26:16 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:26:16 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.39 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user/login" for 172.23.0.1 at 2025-08-20 03:26:53 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1461)
+  Rendered layouts/_notification.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 40990)
+Completed 200 OK in 84ms (Views: 59.1ms | ActiveRecord: 2.5ms | Allocations: 52270)
+
+
+Request took 141.96 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:26:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:26:54 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:26:54 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.53 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user/login" for 172.23.0.1 at 2025-08-20 03:27:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1463)
+  Rendered layouts/_notification.html.erb (Duration: 0.5ms | Allocations: 214)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 40977)
+Completed 200 OK in 50ms (Views: 30.2ms | ActiveRecord: 2.4ms | Allocations: 52365)
+
+
+Request took 64.66 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:27:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:27:18 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:27:18 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 4.1 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/" for 172.23.0.1 at 2025-08-20 03:41:22 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 703)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 7500)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 8608)
+
+
+Request took 31.3 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:41:22 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.53 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:41:22 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:41:22 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:41:22 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 16.81 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/" for 172.23.0.1 at 2025-08-20 03:41:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 754)
+  Rendered layouts/_notification.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 40697)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 42489)
+
+
+Request took 48.12 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:41:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:41:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:41:39 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 7.64 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/" for 172.23.0.1 at 2025-08-20 03:45:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 828)
+  Rendered layouts/_notification.html.erb (Duration: 7.6ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 40301)
+Completed 200 OK in 173ms (Views: 41.3ms | ActiveRecord: 0.0ms | Allocations: 56846)
+
+
+Request took 191.07 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:45:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.12 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:45:27 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:45:27 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 7.23 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/" for 172.23.0.1 at 2025-08-20 03:45:52 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 813)
+  Rendered layouts/_notification.html.erb (Duration: 0.6ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 40721)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms | Allocations: 42517)
+
+
+Request took 47.92 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:45:52 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:45:53 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:45:53 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 12.96 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/" for 172.23.0.1 at 2025-08-20 03:45:55 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 613)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 7383)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 8284)
+
+
+Request took 20.6 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:45:55 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:45:55 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:45:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:45:56 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.04 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/" for 172.23.0.1 at 2025-08-20 03:46:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 814)
+  Rendered layouts/_notification.html.erb (Duration: 0.6ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 40682)
+Completed 200 OK in 209ms (Views: 47.4ms | ActiveRecord: 0.0ms | Allocations: 57030)
+
+
+Request took 264.23 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:46:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:46:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:46:17 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 14.49 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/" for 172.23.0.1 at 2025-08-20 03:46:21 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 527)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7262)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 8165)
+
+
+Request took 16.57 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:46:21 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.13 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:46:21 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:46:21 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:46:21 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.92 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/" for 172.23.0.1 at 2025-08-20 03:46:23 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 528)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 7154)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 8006)
+
+
+Request took 9.25 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:46:23 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.11 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:46:23 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:46:23 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:46:23 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.88 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user/login" for 172.23.0.1 at 2025-08-20 03:46:24 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1401)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 8014)
+Completed 200 OK in 33ms (Views: 14.8ms | ActiveRecord: 0.7ms | Allocations: 14995)
+
+
+Request took 35.8 ms
+Started GET "/en/user/login" for 172.23.0.1 at 2025-08-20 03:48:00 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 938)
+  Rendered layouts/_notification.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7409)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8294)
+
+
+Request took 12.39 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:48:00 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:48:01 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:48:01 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:48:01 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.07 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user/login" for 172.23.0.1 at 2025-08-20 03:52:07 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1581)
+  Rendered layouts/_notification.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 41261)
+Completed 200 OK in 203ms (Views: 34.4ms | ActiveRecord: 9.8ms | Allocations: 67303)
+
+
+Request took 220.2 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:52:07 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:52:08 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:52:08 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.56 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user/login" for 172.23.0.1 at 2025-08-20 03:52:11 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 1006)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 7583)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 8464)
+
+
+Request took 35.65 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:52:11 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:52:11 +0000
+ResultsChannel stopped streaming from results_channel
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:52:11 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:52:11 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 5.38 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started POST "/vi/user/login" for 172.23.0.1 at 2025-08-20 03:53:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abc1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Đăng nhập", "locale"=>"vi"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'abc1@gmail.com' AND `users`.`role` = 0 LIMIT 1[0m
+  ↳ app/controllers/client/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:8083/vi/user
+Completed 302 Found in 260ms (ActiveRecord: 0.7ms | Allocations: 2624)
+
+
+Request took 261.88 ms
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:53:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as TURBO_STREAM
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.7ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.4ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1619)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 8638)
+Completed 200 OK in 26ms (Views: 9.1ms | ActiveRecord: 4.1ms | Allocations: 16857)
+
+
+Request took 34.57 ms
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:53:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.5ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.5ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1229)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 8004)
+Completed 200 OK in 44ms (Views: 20.6ms | ActiveRecord: 5.3ms | Allocations: 10500)
+
+
+Request took 45.58 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:53:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:53:51 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:53:51 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:53:51 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.73 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:57:13 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.3ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (1.9ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1680)
+  Rendered layouts/_notification.html.erb (Duration: 3.0ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 41750)
+Completed 200 OK in 404ms (Views: 57.6ms | ActiveRecord: 17.9ms | Allocations: 74777)
+
+
+Request took 440.63 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:57:14 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.13 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:57:14 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:57:15 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 2.66 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:57:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.4ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (2.2ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1300)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 8450)
+Completed 200 OK in 18ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 10976)
+
+
+Request took 21.46 ms
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:57:17 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:57:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:57:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:57:17 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.9 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:57:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.2ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.4ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1675)
+  Rendered layouts/_notification.html.erb (Duration: 0.6ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 41755)
+Completed 200 OK in 207ms (Views: 37.8ms | ActiveRecord: 5.3ms | Allocations: 74796)
+
+
+Request took 232.75 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:57:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:57:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:57:50 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 4.34 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:57:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.5ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (2.0ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1241)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 8135)
+Completed 200 OK in 23ms (Views: 11.2ms | ActiveRecord: 2.8ms | Allocations: 10668)
+
+
+Request took 25.0 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:57:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:57:57 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:57:57 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:57:57 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.91 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:58:33 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.4ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.4ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1719)
+  Rendered layouts/_notification.html.erb (Duration: 1.1ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 41066)
+Completed 200 OK in 86ms (Views: 43.2ms | ActiveRecord: 5.9ms | Allocations: 59411)
+
+
+Request took 104.97 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:58:33 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.16 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:58:33 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:58:33 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 3.75 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user" for 172.23.0.1 at 2025-08-20 03:58:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.2ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.3ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1713)
+  Rendered layouts/_notification.html.erb (Duration: 0.4ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 41767)
+Completed 200 OK in 90ms (Views: 50.1ms | ActiveRecord: 5.9ms | Allocations: 60146)
+
+
+Request took 107.27 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:58:44 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:58:44 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:58:44 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 8.81 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user" for 172.23.0.1 at 2025-08-20 03:58:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.4ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.5ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1270)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 8045)
+Completed 200 OK in 22ms (Views: 7.4ms | ActiveRecord: 3.2ms | Allocations: 10579)
+
+
+Request took 22.95 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 03:58:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.13 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:58:47 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:58:48 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:58:48 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.05 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user/results" for 172.23.0.1 at 2025-08-20 03:58:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#results as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mPrize Load (0.6ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`id` ASC[0m
+  ↳ app/controllers/client/dashboard_controller.rb:31:in `results'
+  [1m[36mWinner Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `winners` WHERE `winners`.`prize_id` = 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:32:in `block in results'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/results.html.erb within layouts/application
+  [1m[36mWinner Load (4.1ms)[0m  [1m[34mSELECT `winners`.* FROM `winners`[0m
+  ↳ app/views/client/dashboard/results.html.erb:20
+  Rendered client/dashboard/results.html.erb within layouts/application (Duration: 6.9ms | Allocations: 908)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 7826)
+Completed 200 OK in 45ms (Views: 12.4ms | ActiveRecord: 10.2ms | Allocations: 17003)
+
+
+Request took 45.77 ms
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 03:58:50 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 03:58:50 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.65 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user/results" for 172.23.0.1 at 2025-08-20 04:03:37 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#results as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mPrize Load (0.4ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`id` ASC[0m
+  ↳ app/controllers/client/dashboard_controller.rb:31:in `results'
+  [1m[36mWinner Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `winners` WHERE `winners`.`prize_id` = 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:32:in `block in results'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/results.html.erb within layouts/application
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners`[0m
+  ↳ app/views/client/dashboard/results.html.erb:21
+  Rendered client/dashboard/results.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1068)
+  Rendered layouts/_notification.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 41101)
+Completed 200 OK in 231ms (Views: 42.1ms | ActiveRecord: 7.2ms | Allocations: 76141)
+
+
+Request took 264.15 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 04:03:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.1 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:03:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:38 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 17.68 ms
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:03:38 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:38 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.62 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/en/user/results" for 172.23.0.1 at 2025-08-20 04:03:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#results as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mPrize Load (0.6ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`id` ASC[0m
+  ↳ app/controllers/client/dashboard_controller.rb:31:in `results'
+  [1m[36mWinner Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `winners` WHERE `winners`.`prize_id` = 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:32:in `block in results'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/results.html.erb within layouts/application
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners`[0m
+  ↳ app/views/client/dashboard/results.html.erb:21
+  Rendered client/dashboard/results.html.erb within layouts/application (Duration: 5.6ms | Allocations: 644)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7418)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 1.6ms | Allocations: 9939)
+
+
+Request took 21.49 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 04:03:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.09 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:41 +0000
+ResultsChannel stopped streaming from results_channel
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:42 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:03:42 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:42 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 1.29 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:03:42 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:42 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.86 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user/results" for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#results as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mPrize Load (2.1ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`id` ASC[0m
+  ↳ app/controllers/client/dashboard_controller.rb:31:in `results'
+  [1m[36mWinner Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `winners` WHERE `winners`.`prize_id` = 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:32:in `block in results'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/results.html.erb within layouts/application
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners`[0m
+  ↳ app/views/client/dashboard/results.html.erb:21
+  Rendered client/dashboard/results.html.erb within layouts/application (Duration: 1.5ms | Allocations: 645)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 7563)
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 3.3ms | Allocations: 10079)
+
+
+Request took 24.91 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 0.08 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+ResultsChannel stopped streaming from results_channel
+Finished "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+ResultsChannel stopped streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.91 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:03:45 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 16.02 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user/results" for 172.23.0.1 at 2025-08-20 04:04:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#results as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mPrize Load (0.3ms)[0m  [1m[34mSELECT `prizes`.* FROM `prizes` ORDER BY `prizes`.`id` ASC[0m
+  ↳ app/controllers/client/dashboard_controller.rb:31:in `results'
+  [1m[36mWinner Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `winners` WHERE `winners`.`prize_id` = 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:32:in `block in results'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/results.html.erb within layouts/application
+  [1m[36mWinner Load (0.3ms)[0m  [1m[34mSELECT `winners`.* FROM `winners`[0m
+  ↳ app/views/client/dashboard/results.html.erb:21
+  Rendered client/dashboard/results.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1051)
+  Rendered layouts/_notification.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 41048)
+Completed 200 OK in 116ms (Views: 38.7ms | ActiveRecord: 8.6ms | Allocations: 61369)
+
+
+Request took 152.49 ms
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.23.0.1 at 2025-08-20 04:04:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Request took 2.73 ms
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:04:12 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:04:12 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 8.53 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/cable" for 172.23.0.1 at 2025-08-20 04:04:13 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable" [WebSocket] for 172.23.0.1 at 2025-08-20 04:04:13 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Request took 0.82 ms
+ResultsChannel is transmitting the subscription confirmation
+ResultsChannel is streaming from results_channel
+Started GET "/vi/user/select-number" for 172.23.0.1 at 2025-08-20 04:04:14 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::DashboardController#select_number as HTML
+  Parameters: {"locale"=>"vi"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mSelectNumber Pluck (0.4ms)[0m  [1m[34mSELECT `select_numbers`.`number` FROM `select_numbers`[0m
+  ↳ app/controllers/client/dashboard_controller.rb:10:in `select_number'
+  [1m[36mSelectNumber Load (0.5ms)[0m  [1m[34mSELECT `select_numbers`.* FROM `select_numbers` WHERE `select_numbers`.`user_id` = 2 ORDER BY `select_numbers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/client/dashboard_controller.rb:11:in `select_number'
+  Rendering layout layouts/application.html.erb
+  Rendering client/dashboard/select_number.html.erb within layouts/application
+  Rendered client/dashboard/select_number.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1685)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 8604)
+Completed 200 OK in 39ms (Views: 14.2ms | ActiveRecord: 6.3ms | Allocations: 15864)
+
+
+Request took 40.27 ms
+Unsubscribing from channel: {"channel":"ResultsChannel"}
+ResultsChannel stopped streaming from results_channel
+Started DELETE "/vi/user/logout" for 172.23.0.1 at 2025-08-20 04:04:19 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "locale"=>"vi"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:8083/vi/user/login
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1478)
+
+
+Request took 9.05 ms
+Started GET "/vi/user/login" for 172.23.0.1 at 2025-08-20 04:04:19 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Client::SessionsController#new as TURBO_STREAM
+  Parameters: {"locale"=>"vi"}
+  Rendering layout layouts/application.html.erb
+  Rendering client/sessions/new.html.erb within layouts/application
+  Rendered client/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1443)
+  Rendered layouts/_notification.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 7965)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9107)
+
+
+Request took 13.09 ms

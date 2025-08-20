@@ -3,3 +3,5 @@ en:
     save: "Save"
     cancel: "Cancel"
     back: "Back"
+    logout: "Logout"
+    login: "Login"

@@ -1,6 +1,6 @@
-<% content_for :title, "Chọn số" %>
+<% content_for :title, t("users.select_number.title")  %>
 <div data-controller="giftbox">
-  <div class="text-header">Màn hình chọn số</div>
+  <div class="text-header"><%= t("users.select_number.title") %></div>
   <div class="gift-grid mt-5">
     <% @numbers.each do |num| %>
       <%
@@ -32,10 +32,10 @@
       data-action="click->giftbox#submit"
       data-giftbox-target="submitButton"
       class="btn btn-primary mt-3">
-      Xác nhận chọn
+      <%= t("users.select_number.btn_select") %>
     </button>
   <% end %>
-  <%= link_to "Quay số", user_results_path,
+  <%= link_to t("users.select_number.btn_random_number"), user_results_path,
               class: "btn btn-primary mt-3  #{ @user_number ? '' : 'd-none' }",
               data: { giftbox_target: "btnResult" } %>
 

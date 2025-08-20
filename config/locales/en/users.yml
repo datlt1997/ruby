@@ -1,6 +1,19 @@
 en:
   users:
-    index:
-      title: "Users list"
-    show:
-      title: "User details"
+    select_number:
+      title: "Choose Lucky Number"
+      btn_select: "Confirm number"
+      btn_random_number: "Spin number"
+    login:
+      title_page: "Login"
+      email:
+        title: "Email"
+        placeholder: "Fill Email"
+      password:
+        title: "Password"
+        placeholder: "Fill password"
+    result:
+      title: "Prize Spin Result"
+      btn_select: "Select number"
+      prize: "Prizes"
+      prize_list: "Prize list"

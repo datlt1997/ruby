@@ -1,4 +1,4 @@
-<% content_for :title, "Login" %>
+<% content_for :title, t("users.login.title_page") %>
 <div class="form-login mx-auto">
   <div class="form-login-header mb-3">
     <%= image_tag "logo.png", alt: "Blog", height: 70 %>
@@ -7,22 +7,22 @@
   <div class="form-login-body">
     <%= form_with model: @user, url: user_login_path, method: :post, local: true do |f| %>
       <div class="mb-3">
-        <%= f.label :email, "Email", class: "form-label" %>
-        <%= f.text_field :email, class: "form-control #{'is-invalid' if @user.errors[:email].any?}", placeholder: "Nhập Email" %>
+        <%= f.label :email, t("users.login.email.title"), class: "form-label" %>
+        <%= f.text_field :email, class: "form-control #{'is-invalid' if @user.errors[:email].any?}", placeholder: t("users.login.email.placeholder") %>
         <% if flash[:errors]&.dig(:email) %>
           <span class="text-danger d-block"><%= flash[:errors][:email].first %></span>
         <% end %>
       </div>
 
       <div class="mb-3">
-        <%= f.label :password, "Mật khẩu", class: "form-label" %>
-        <%= f.password_field :password, class: "form-control #{'is-invalid' if @user.errors[:password].any?}", placeholder: "Nhập password" %>
+        <%= f.label :password, t("users.login.password.title"), class: "form-label" %>
+        <%= f.password_field :password, class: "form-control #{'is-invalid' if @user.errors[:password].any?}", placeholder: t("users.login.password.placeholder") %>
         <% if flash[:errors]&.dig(:password) %>
           <span class="text-danger d-block"><%= flash[:errors][:password].first %></span>
         <% end %>
       </div>
 
-      <%= submit_tag "Đăng nhập", class: "btn btn-primary d-block mx-auto" %>
+      <%= submit_tag t("common.login"), class: "btn btn-primary d-block mx-auto" %>
     <% end %>
   </div>
   

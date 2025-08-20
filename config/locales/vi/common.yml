@@ -1,5 +1,7 @@
 vi:
   common:
-    save: "Save"
-    cancel: "Cancel"
-    back: "Back"
+    save: "Lưu"
+    cancel: "Hủy bỏ"
+    back: "Trở lại"
+    logout: "Đăng xuất"
+    login: "Đăng nhập"
